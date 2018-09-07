@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.jakewharton.butterknife'
 apply from: './utils.gradle'
-apply plugin: 'com.github.dcendents.android-maven'//this
-group='com.github.wsbslib'//this
+//apply plugin: 'com.github.dcendents.android-maven'//this
+group='com.github.fanglingfeng'//this
 android {
     // 关键步骤2： 修改默认的发布config
     defaultPublishConfig(getCurrentFlavor(project.name, "baoanRelease"))
