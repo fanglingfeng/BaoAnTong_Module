@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="loadObservableBean"
+            type="com.tjsoft.webhall.entity.LoadObservableBean"/>
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:id="@+id/failed_to_load_layout"
+        android:visibility="@{loadObservableBean.showReloadLayout?View.VISIBLE:View.GONE}">
+        <LinearLayout
+            android:id="@+id/reload_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/space_45"
+                android:layout_height="@dimen/space_45"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_cry_face" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_13"
+                android:gravity="center"
+                android:text="加载失败"
+                android:textColor="#DADADA"
+                android:textSize="@dimen/text_size_14" />
+            <ImageView
+                android:layout_width="@dimen/space_35"
+                android:layout_height="@dimen/space_35"
+                android:layout_marginTop="@dimen/space_15"
+                android:src="@mipmap/icon_refresh" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

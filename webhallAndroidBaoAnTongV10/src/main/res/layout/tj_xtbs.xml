@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tj_nav_bg" >
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tj_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="协同办事"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tj_more" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#0d5392"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp" >
+
+        <Button
+            android:id="@+id/tag1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/tj_oval_btn_bg"
+            android:text="企业设立登记"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/tj_my_green"
+            android:textSize="13sp" />
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/tag2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/tj_transparent"
+            android:text="投资项目审批"
+            android:textColor="@color/tj_white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/deptList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#dddddd"
+        android:dividerHeight="1px" />
+
+    <ScrollView
+        android:id="@+id/lay2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:visibility="gone">
+
+        <LinearLayout
+            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="立项阶段："
+                android:textColor="@color/tj_my_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="（1）企业投资核准-储备类用地或者自有用地
+\n（2）企业投资核准-非储备类用地
+\n（3）企业投资备案-储备类用地或者自有用地
+\n（4）企业投资备案-非储备类用地
+\n（5）政府投资-非储备类用地
+\n（6）政府投资-自有用地
+\n（7）政府投资-储备类用地"
+                android:textColor="@color/tj_white" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="用地审批阶段："
+                android:textColor="@color/tj_my_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="（1）划拨类用地（村使用的国有建设用地）
+\n（2）划拨类用地（项目单位自行征地拆迁用地）
+\n（3）划拨类用地（政府储备用地）
+\n（4）划拨类用地（项目单位自有国有建设用地）
+\n（5）协议出让类（项目单位自有国有建设用地）
+\n（6）协议出让类（村使用的国有建设用地）
+\n（7）协议出让类（项目单位自行征地拆迁用地）
+\n（8）协议出让类（政府储备用地）
+\n（9）公开出让类用地"
+                android:textColor="@color/tj_white" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="规划报建阶段："
+                android:textColor="@color/tj_my_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="（1）规划报建（道路及轨道交通工程）
+\n（2）规划报建（管线工程）
+\n（3）规划报建（河涌水系工程）
+\n（4）规划报建（建筑工程）"
+                android:textColor="@color/tj_white" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="施工许可"
+                android:textColor="@color/tj_my_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="竣工验收"
+                android:textColor="@color/tj_my_green"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

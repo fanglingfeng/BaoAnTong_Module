@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">图像切边及增强</string>
+    <string name="a_label_auto">自动</string>
+    <string name="a_label_none_enhance">原图</string>
+    <string name="a_label_enhance">增强</string>
+    <string name="a_label_trim_image">切边</string>
+    <string name="a_label_enhance_sharp">增强并锐化</string>
+    <string name="a_label_gray">灰度模式</string>
+    <string name="a_label_white_black">黑白模式</string>
+    <string name="a_msg_working">处理中...</string>
+    <string name="a_label_back">返回</string>
+    <string name="a_label_add_image">添加jpg 或  png图片</string>
+    <string name="a_label_save">保存</string>
+    <string name="a_label_ok">确定</string>
+    <string name="a_label_cancel">取消</string>
+    <string name="a_label_open">确定</string>
+    <string name="a_msg_illegal">非法图片！</string>
+    <string name="a_msg_not_available_application">没有找到支持的应用</string>
+    <string name="a_msg_limit">只支持jpg 和 png格式的图片。</string>
+    <string name="a_msg_copyright">上海合合信息科技发展有限公司 \nCopyright © 版权所有</string>
+    <string name="bound_trim_error">切边区域不合法，请重新调整切边区域</string>
+    <string name="sdcard_unmonted_hint">请先挂载SD卡</string>
+    <string name="notify">提示</string>
+    <string name="empty_directory">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="choose_file">Select a file</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+
+    <string name="a_label_img_jpg">jpg</string>
+    <string name="a_label_img_png">png</string>
+    <string name="a_label_img_jpeg">jpeg</string>
+
+
+
+    <string name="cui_welcome_title">合 合 信 息 智 能 识 别 系 统</string>
+    <string name="cui_welcome_module_title">图像切边及增强V1.0</string>
+    <string name="a_label_gallery">选图识别</string>
+    <string name="a_label_captrue">拍照识别</string>
+    <string name="intsig_copyright">上海合合信息科技发展有限公司\n Copyright© 2009-2017 版权所有</string>
+
+    <string name="cui_app_title">图像切边及增强</string>
+    <string name="cui_dl_tips_take_photo">拍照识别</string>
+    <string name="cui_dl_tips_pick_photo">选图识别</string>
+    <string name="cui_a_msg_empty_tips">请先拍照或者选图来识别</string>
+    <string name="tj_app_name">深圳市</string>
+    <string name="tj_action_settings">Settings</string>
+    <string name="tj_loding">正在加载数据中</string>
+    <string name="tj_occurs_error_network">服务异常，请稍后重试</string>
+    <string name="tj_OK_TIPS">操作成功</string>
+    <string name="tj_NOT_MODIFIED_TIPS">无修改，无返回新数据</string>
+    <string name="tj_NOT_AUTHORIZED_TIPS">未通过授权</string>
+    <string name="tj_FORBIDDEN_TIPS">无权访问</string>
+    <string name="tj_NOT_FOUND_TIPS">没有找到指定的服务</string>
+    <string name="tj_NOT_ACCEPTABLE_TIPS">指定的服务是无效的</string>
+    <string name="tj_INTERNAL_SERVER_ERROR_TIPS">服务处理异常</string>
+    <string name="tj_BAD_GATEWAY_TIPS">系统正在升级或维护中</string>
+    <string name="tj_SERVICE_UNAVAILABLE_TIPS">服务不可用，请稍后再试</string>
+    <string name="tj_BAD_REQUEST_TIPS">错误的请求，请检查请求地址格式是否正确</string>
+    <string name="tj_time_out_error">网络连接超时，请稍后重试</string>
+    <string name="tj_update_user_error">您的用户信息不完善，如需进入下一步操作，请先完善用户信息。</string>
+    <string name="tj_fwjs">业务进度检索</string>
+    <string name="tj_home">网上办事</string>
+    <string name="tj_personal_business">个人办事</string>
+    <string name="tj_employers">企业办事</string>
+    <string name="tj_dept_serve">部门服务</string>
+    <string name="tj_user_login">用户登录</string>
+    <string name="tj_search">查找</string>
+    <string name="tj_subject_classification">主题分类</string>
+    <string name="tj_life_events">人生事件</string>
+    <string name="tj_business_activities">经营活动</string>
+    <string name="tj_specific_groups">特定群体</string>
+    <string name="tj_perm_guide">办事指南</string>
+    <string name="tj_perm_item">服务事项</string>
+    <string name="tj_apply_online">在线申办</string>
+    <string name="tj_register">用户注册</string>
+    <string name="tj_notify">提示</string>
+    <string name="tj_OK">确定</string>
+    <string name="tj_cancel">取消</string>
+    <string name="tj_exit_prompt">您确定要退出软件吗？</string>
+    <string name="tj_xlistview_header_hint_normal">下拉刷新</string>
+    <string name="tj_xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="tj_xlistview_header_hint_loading">正在加载...</string>
+    <string name="tj_xlistview_header_last_time">上次更新时间：</string>
+    <string name="tj_xlistview_footer_hint_normal">查看更多</string>
+    <string name="tj_xlistview_footer_hint_ready">松开载入更多</string>
+    
+    
+    <string name="tj_menu_settings">Settings</string>
+    <string name="tj_title_activity_main">MainActivity</string>
+    <string name="tj_open_file_failed">文件打开失败</string>
+    <string name="tj_open_file_error_format">文件格式不正确</string>
+    <string name="tj_open_file_none">您没有选择任何文件</string>
+    <string name="tj_empty_hint">文件夹为空</string>
+    <string name="tj_sdcard_unmonted_hint">请先挂载SD卡</string>
+    
+    <string name="tj_certificateid">证照编号不能为空！</string>
+    <string name="tj_certificatestartdate">证照有效期(起)不能为空！</string>
+    <string name="tj_certificateenddate">证照有效期(止)不能为空！</string>
+    <string name="tj_notice">您办理的业务包含复杂的在线表单，请先暂存该业务件，暂存成功后登录（http://bsdt.baoan.gov.cn/app/scan.jspx）继续填报相关信息。</string>
+    <string name="tj_search_empty_notice">事项名称/编号不能为空！</string>
+    
+    
+    	<string name="a_msg_no_pdf_activity">No activity for opening PDF file</string>
+	<string name="a_title_success">Success</string>
+	<string name="a_title_reject">Fail</string>
+	<string name="a_msg_cancel">User Cancel</string>
+	<string name="a_label_send_to_cs">Pick Image</string>
+	
+	<string name="a_msg_api_success">Open API call Success</string>
+	<string name="a_msg_invalid_app">Invalid APP ID</string>
+	<string name="a_msg_invalid_source">Invalid image resouce</string>
+	<string name="a_msg_auth_expired">Authorization Expired</string>
+	<string name="a_msg_mode_unavailable">The choosen enhance mode is unavailable for this app_id</string>
+	<string name="a_msg_num_limit">Over the request number limit</string>
+	<string name="a_msg_store_jpg_error">CamScanner can\'t return scanned image file</string>
+	<string name="a_msg_store_pdf_error">CamScanner can\'t return scanned PDF file</string>
+	<string name="a_msg_store_org_error">CamScanner can\'t return original image file</string>
+	<string name="a_msg_app_unregistered">CamScanner can\'t return scanned file</string>
+	<string name="a_msg_api_version_illegal">This app is not regisered</string>
+	<string name="a_msg_device_limited">Over the device number limit</string>
+	<string name="a_msg_not_login">CamScanner user do not login</string>
+	
+	<string name="ellipsis">\u2026</string> 
+	<string name="about_us_tv">本单位（本人）自愿申请成为“深圳市宝安区网上办事大厅”用户，并郑重承诺如下：\n
+
+本单位（本人）同意并接受《深圳市宝安区网上办事服务条款》所有内容。\n
+
+在取得“深圳市宝安区网上办事大厅”合法用户身份后，应妥善管理用户密码及数字证书，严格遵循国家有关法规、政策及社保业务规范，保证提交业务数据及资料的真实、准确，并对有关资料妥善留存、归档，按业务审批机构要求提供审验。\n
+
+如违反以上承诺造成的不良后果，本单位（本人）行为将纳入不良诚信记录,并承担全部责任。\n
+注：本承诺书经用户签署后立即生效，直至注销其用户资格为止。</string>
+	<string name="fuzha_tip">提示：该事项包含复杂表单，须先暂存，暂存成功之后前往电脑端打开http://bsdt.baoan.gov.cn/appscan并扫描二维码继续申报</string>
+
+
+</resources>

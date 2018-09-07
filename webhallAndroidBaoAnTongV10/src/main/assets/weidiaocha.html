@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0077)file:///Users/tjsoft/Downloads/20100708180715106800/20100708180715106800.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>提交投票</title>
+<style type="text/css">
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a,abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0px;padding:0px;}
+body{font-family:Arial, Helvetica, sans-serif "宋体";font-size:12px;line-height:25px;}
+ul,li{margin:0;padding:0;list-style:none outside none; }
+img{border:0;}
+
+.total-warp{width:100%;margin:0 auto;}
+.table01{font-family:"微软雅黑";font-size:14px;color:#333;line-height:37px;}
+.table01 .ta{font-size:20px;color:#333;text-align:center;line-height:40px;}
+.table01 .tb{width:28%;color:#1675d3;text-align:right;}
+
+.textfield{width:90%;height:25px;line-height:25px; background:url(../images/but-bg.jpg) repeat-x;font-family:"微软雅黑";font-size:14px;color:#666;border-bottom:1px solid #d4d4d4;border-top:1px solid #969696;border-left:1px solid #b4b4b4;border-right:1px solid #d4d4d4;text-indent:5px;}
+
+.textarea{width:90%;height:100px;line-height:25px;background:url(../images/but-bg.jpg) repeat-x top;font-family:"微软雅黑";font-size:14px;color:#666;border-bottom:1px solid #d4d4d4;border-top:1px solid #969696;border-left:1px solid #b4b4b4;border-right:1px solid #d4d4d4;margin:5px 0;overflow-y:hidden; *margin-left:5px;}
+
+.select{width:90%;height:27px;line-height:27px;background:url(../images/but-bg.jpg) repeat-x bottom;font-family:"微软雅黑";font-size:14px;color:#666;border-bottom:1px solid #d4d4d4;border-top:1px solid #969696;border-left:1px solid #b4b4b4;border-right:1px solid #d4d4d4;*margin-left:5px;}
+
+.but{width:30%;font-family:"微软雅黑";font-size:14px;height:40px;color:#fff;line-height:30px;background:url(../images/but-bg1.jpg) repeat-x;border:1px solid #196cc8;cursor:pointer;}
+</style>
+<script type="text/javascript">
+function validated(){
+}
+
+var datas =  "["+
+			 "{\"VOTEITEM_ID\": \"1键\","+
+				"\"VOTEITEM_TITLE\": \"投票选项1\","+
+				"\"PRIORITY\": \"排列顺序\""+
+				"},"+
+				"{"+
+                "\"VOTEITEM_ID\": \"2键\","+
+				"\"VOTEITEM_TITLE\": \"投票选项2\","+
+				"\"PRIORITY\": \"排列顺序\""+
+            "},{"+
+                "\"VOTEITEM_ID\": \"3主键\","+
+				"\"VOTEITEM_TITLE\": \"投票选项3\","+
+				"\"PRIORITY\": \"排列顺序\""+
+            "},{"+
+                "\"VOTEITEM_ID\": \"4主键\","+
+				"\"VOTEITEM_TITLE\": \"投票选项4\","+
+				"\"PRIORITY\": \"排列顺序\""+
+            "}]";
+//初始化数据方法，传入获取未调查接口数据的ReturnValue对象json字符串
+function initData(data){
+	
+	var target = document.getElementById('table01');
+	var html = '';
+	var voteites;
+	var vType = "radio";
+	if(data == null){
+		voteites = JSON.parse(datas);
+	}else{
+        data = JSON.parse(data);
+		 var type = data.MULTI_SELECT;
+		 if("2" == type){
+			 vType = "checkbox";
+		}
+		voteites = data.Items;
+         
+	}
+    
+	var vtitile = data.TITLE;
+	var len = voteites.length;
+	for(var i = 0;i < len;i ++){
+		var d =  "<tr>"+
+					"<td class=\"tb\"><input type=\""+vType+"\" id=\""+voteites[i].VOTEITEM_ID+"\" name='vote' value=\""+voteites[i].VOTEITEM_ID+"\"/></td>"+
+    			   "<td><font size='4pt'>"+voteites[i].VOTEITEM_TITLE+"</font></td>"+
+ 			    "</tr>";
+        html += d;
+    }
+	 
+	target.innerHTML =  "<th colspan=\"2\" rowspan=\"1\"><font size='4pt'>"+vtitile+
+ 			    "</font></th>"+
+				html;	
+}
+//检查投票的选项
+function check_radio(){
+    var chkObjs = document.getElementsByName("vote");
+	var arr1 = new Array(); 
+	var vid = "";
+	var len = chkObjs.length;
+	var firstFlag = 1;
+    for(var i=0;i < len;i++){
+        if(chkObjs[i].checked){
+			var vvid = chkObjs[i].value;
+			if(chkObjs[i].type == "checkbox"){
+				if(i > 0 && i < len && firstFlag != 1){
+					vid += ",";
+				}
+				vid += vvid;
+				
+				firstFlag = 0;
+			}else  vid = vvid;
+         }
+       }
+	if(vid == null || vid == ""){
+		alert("请选择投票选项");
+		return;
+	}
+	return vid;
+}
+//android提交方法
+function androidSubmit(){
+	var vid = check_radio();
+	if(null!= vid&&vid!=""){
+		window.android.finish(vid);
+	}
+    //调用android
+}
+//ios提交方法
+function iosSubmit(){
+	var vid = check_radio();
+	return vid;
+}
+
+</script>
+</head>
+<body>
+<div class="total-warp">
+  <form id="form1" name="form1">
+  <table width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto;" class="table01" id="table01">
+  </table>
+  </form>  
+</div>
+
+</body></html>

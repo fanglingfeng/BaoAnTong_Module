@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_center_tv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/materialName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="@dimen/space_10"
+                android:text="材料名称"
+                android:textColor="@color/tj_black"
+                android:textSize="@dimen/text_size_16" />
+
+            <include layout="@layout/view_line_vertical" />
+
+            <TextView
+                android:id="@+id/licenseInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_10"
+                android:text="温馨提示：上传文件不能超过2M,大于2M的建议去PC版上传。支持上传的文件有word、excel、图片、pdf。"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.github.clans.fab.FloatingActionMenu
+                    android:id="@+id/menu_fab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/space_16"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingRight="@dimen/space_16"
+                    android:paddingTop="@dimen/space_16"
+                    fab:menu_animationDelayPerItem="0"
+                    fab:menu_backgroundColor="#99000000"
+                    fab:menu_colorNormal="@color/yellow"
+                    fab:menu_colorPressed="@color/order_yellow"
+                    fab:menu_colorRipple="@color/order_yellow"
+                    fab:menu_icon="@mipmap/fab_add"
+                    fab:menu_labels_ellipsize="end"
+                    fab:menu_labels_maxLines="2">
+                    <!--<item name="fab_size">mini</item>
+                            <item name="fab_showAnimation">@anim/jump_from_down</item>
+                            <item name="fab_hideAnimation">@anim/jump_to_down</item>
+                            <item name="fab_colorNormal">@color/white</item>
+                            <item name="fab_colorPressed">@color/whitegray</item>
+                            <item name="fab_colorRipple">@color/whitegray</item>-->
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/fab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/fab_photo"
+                        fab:fab_size="mini"
+                        fab:fab_colorNormal="@color/white"
+                        fab:fab_colorPressed="@color/whitegray"
+                        fab:fab_colorRipple="@color/whitegray"
+                        fab:fab_hideAnimation="@anim/jump_to_down"
+                        fab:fab_label="拍照上传"
+                        fab:fab_showAnimation="@anim/jump_from_down" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/fab2"
+                        fab:fab_size="mini"
+                        fab:fab_colorNormal="@color/white"
+                        fab:fab_colorPressed="@color/whitegray"
+                        fab:fab_colorRipple="@color/whitegray"
+                        fab:fab_hideAnimation="@anim/jump_to_down"
+
+                        fab:fab_showAnimation="@anim/jump_from_down"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/fab_picture"
+                        fab:fab_label="选择图片" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        fab:fab_size="mini"
+                        fab:fab_colorNormal="@color/white"
+                        fab:fab_colorPressed="@color/whitegray"
+                        fab:fab_colorRipple="@color/whitegray"
+                        fab:fab_hideAnimation="@anim/jump_to_down"
+
+                        fab:fab_showAnimation="@anim/jump_from_down"
+                        android:id="@+id/fab3"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/fab_file"
+                        fab:fab_label="选择文件" />
+
+                </com.github.clans.fab.FloatingActionMenu>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_3"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/shape_shadow_bottom" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/space_5"
+                    android:background="@drawable/btn_toolbar_tv_selector"
+                    android:text="删除"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_17" />
+
+                <CheckBox
+                    android:id="@+id/cb_select_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:text="全选"
+                    android:textColor="@color/colorPrimary" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="温馨提示：长按图片拖拽可调整材料顺序哦！"
+            android:textColor="@color/yellow"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_page_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_weight="1"
+                android:text="(18/18)"
+                android:textColor="@color/tj_black"
+                android:textSize="@dimen/text_size_16" />
+
+            <Button
+                android:id="@+id/auto_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_40"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/space_5"
+                android:background="@drawable/btn_toolbar_tv_selector_red"
+                android:gravity="center"
+                android:text="全部删除"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/text_size_17"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_40"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/space_5"
+                android:background="@drawable/btn_toolbar_tv_selector"
+                android:tag="skin:colorPrimary:textColor|skin:btn_toolbar_tv_selector:background"
+                android:text="上一份"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_17" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_40"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/space_5"
+                android:background="@drawable/btn_toolbar_tv_selector"
+                android:tag="skin:colorPrimary:textColor|skin:btn_toolbar_tv_selector:background"
+                android:text="下一份"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_17" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

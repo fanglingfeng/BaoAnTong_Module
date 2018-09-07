@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/more_popup_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popup_more_jdcx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_recycler_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/main_more_jdcx" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="进度查询"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tj_gray_bg" />
+
+    <LinearLayout
+        android:id="@+id/popup_more_wdfw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_recycler_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/main_more_fwwd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="服务网点"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tj_gray_bg" />
+
+    <LinearLayout
+        android:id="@+id/popup_more_qysq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_recycler_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/main_more_qysq" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="企业申请信息确认"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tj_gray_bg" />
+
+    <LinearLayout
+        android:id="@+id/popup_more_scxkz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_recycler_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/main_more_scxkz" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="上传许可证"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

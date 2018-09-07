@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_default"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/ios_default"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tj_black"
+            android:gravity="center"
+            android:padding="@dimen/space_8"
+            android:text="请选择示例"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_18" />
+
+        <TextView
+            android:id="@+id/tv_shili1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_marginRight="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_30"
+            android:background="@drawable/tj_blue_btn_shape"
+            android:gravity="center"
+            android:padding="@dimen/space_10"
+            android:text="样例一"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_18" />
+
+        <TextView
+            android:layout_marginBottom="@dimen/space_20"
+            android:id="@+id/tv_shili2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_marginRight="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_20"
+            android:background="@drawable/tj_blue_btn_shape"
+
+            android:gravity="center"
+            android:padding="@dimen/space_10"
+            android:text="样例二"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_18" />
+
+    </LinearLayout>
+
+</LinearLayout>

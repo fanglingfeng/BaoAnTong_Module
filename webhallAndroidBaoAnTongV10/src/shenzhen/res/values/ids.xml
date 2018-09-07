@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="selected_view" type="id"/>
+
+    <!-- start zxing -->
+    <!-- Messages IDs -->
+    <item name="tj_auto_focus" type="id"/>
+    <item name="tj_decode" type="id"/>
+    <item name="tj_decode_failed" type="id"/>
+    <item name="tj_decode_succeeded" type="id"/>
+    <item name="tj_encode_failed" type="id"/>
+    <item name="tj_encode_succeeded" type="id"/>
+    <item name="tj_launch_product_query" type="id"/>
+    <item name="tj_quit" type="id"/>
+    <item name="tj_restart_preview" type="id"/>
+    <item name="tj_return_scan_result" type="id"/>
+    <item name="tj_search_book_contents_failed" type="id"/>
+    <item name="tj_search_book_contents_succeeded" type="id"/>
+    <!-- end zxing -->
+
+</resources>

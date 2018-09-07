@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <import type="android.text.TextUtils"/>
+
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="@dimen/space_1"
+                  android:background="@color/white"
+                  android:gravity="center_vertical"
+                  android:orientation="horizontal"
+                  android:padding="@dimen/space_10">
+        <TextView android:id="@+id/tv_filename" android:layout_width="0dp"
+                  android:layout_height="wrap_content" android:layout_weight="1"
+                  android:textColor="@color/tj_black"/>
+        <LinearLayout
+            android:id="@+id/ll_choose_material"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_toolbar_tv_selector"
+            android:gravity="center_vertical" android:orientation="horizontal"
+            android:padding="@dimen/space_5">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/xuanze"/>
+            <TextView
+                android:id="@+id/tv_choose_material"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_5" android:text="选择"
+                android:textColor="@color/colorPrimary"/>
+
+
+        </LinearLayout>
+        <TextView
+
+            android:padding="@dimen/space_5"
+            android:background="@drawable/btn_toolbar_gray_tv_shape"
+            android:visibility="gone"
+            android:id="@+id/tv_yixuanze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_5" android:text="添加成功"
+            android:textColor="@color/tj_gray"/>
+
+    </LinearLayout>
+</layout>

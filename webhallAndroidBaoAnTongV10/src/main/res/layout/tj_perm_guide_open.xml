@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tj_white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F6FB"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:layout_width="4dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#56aee2" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textColor="#56aee2"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic1" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="办理条件："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    
+                    android:id="@+id/status1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/tj_arrows_open" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_SPTJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic2" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="申请材料说明："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_SQCL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp"
+                 />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic3" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="窗口办理流程："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status3"
+         android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_WORKFLOW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp"
+                android:visibility="gone"
+                 />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic4" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="网上办理流程："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status4"
+                  android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_WLBLLC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic5" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="办理时限："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status5"
+                    android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_LIMITDAYS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic6" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="收费标准："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status6"
+                 android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_SPSF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp"
+                 />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic8" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="办理依据："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status8"
+                        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_SDYJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic9" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="办理窗口："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status9"
+                      android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/work_window"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 >
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic10" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="审批表格下载："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status10"
+                         android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/tj_table_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:id="@+id/title7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/guide_ic7" />
+
+                <TextView
+                    
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="常见问题解答："
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/status7"
+                         android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tj_arrows_open"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <TextView
+                android:id="@+id/txt_CJWTJD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#6b6c6f"
+                android:textSize="14sp"
+                 />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/apply"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/tj_red_btn_full_style"
+        android:textColor="@color/tj_white"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+</LinearLayout>

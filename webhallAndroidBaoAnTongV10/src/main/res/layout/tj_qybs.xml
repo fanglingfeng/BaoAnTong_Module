@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:background="@color/tj_white"
+   >
+       <RadioGroup
+        android:visibility="gone"
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:textColor="@color/tj_black"
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="企业主题"
+            android:background="@drawable/tj_side_tag_style"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:textColor="@color/tj_black"
+            android:id="@+id/rb2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tj_middle_tag_style"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="企业事件"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:textColor="@color/tj_black"
+            android:id="@+id/rb3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/tj_side_tag_style"
+            android:text="特定企业"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+                    <GridView
+                        android:visibility="visible"
+                        android:id="@+id/gridView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@drawable/bg_gv"
+                        android:numColumns="2"
+            
+                />
+
+</LinearLayout>

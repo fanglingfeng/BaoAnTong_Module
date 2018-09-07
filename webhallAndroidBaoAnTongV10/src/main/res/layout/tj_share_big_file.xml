@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_default" >
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"	    
+	     android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="温馨提示：上传文件不能超过2M,大于2M的建议去PC版上传。支持上传的文件有word、excel、图片、pdf。"
+        android:visibility="gone"
+        android:textColor="@color/tj_red" />
+
+
+    <ListView
+		android:background="@color/white"
+		android:layout_marginTop="@dimen/space_10"
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="10dp"
+        android:layout_marginBottom="0dp">
+    </ListView>
+
+    <ImageView
+        android:id="@+id/empty"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/tj_empty"
+        android:contentDescription="@null" />
+    	
+	</LinearLayout>
+
+</RelativeLayout>

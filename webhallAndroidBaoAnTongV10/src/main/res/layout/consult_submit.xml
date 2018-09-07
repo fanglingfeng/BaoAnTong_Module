@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tj_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="姓名："
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="right|center_vertical"
+                    android:maxLength="14"
+                    android:text="ddd"
+                    android:textColor="@color/tj_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tj_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="手机号："
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="right|center_vertical"
+                    android:maxLength="14"
+                    android:text="11"
+                    android:textColor="@color/tj_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tj_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="区域："
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="5dp" />
+
+                    <TextView
+                        android:id="@+id/txtArea"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/tj_white"
+                        android:gravity="right|center_vertical"
+                        android:maxLength="14"
+                        android:text="请选择区域"
+                        android:textColor="@color/tj_gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/tj_arrows"
+                    android:contentDescription="@null" />
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tj_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="部门："
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="5dp" />
+
+                    <TextView
+                        android:id="@+id/txtDept"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/tj_white"
+                        android:gravity="right|center_vertical"
+                        android:maxLength="14"
+                        android:text="请选择部门"
+                        android:textColor="@color/tj_gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/tj_arrows"
+                    android:contentDescription="@null" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tj_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="主题："
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mainTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入主题"
+                    android:maxLength="14"
+                    android:textColor="@color/tj_gray"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/tj_arrows"
+                    android:contentDescription="@null" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/tj_line_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/tj_white"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/tj_white"
+                    android:gravity="left"
+                    android:text="描述："
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:gravity="top"
+                    android:hint="请输入1-500字的问题描述"
+                    android:textColor="@color/tj_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/tj_online_booking_selector"
+        android:text="提交"
+        android:textColor="@color/tj_white"
+        android:textSize="17sp" />
+
+</LinearLayout>

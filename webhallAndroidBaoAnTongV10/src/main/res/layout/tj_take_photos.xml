@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#1b1b1b"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rotateBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#121212"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/leftRotate"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:background="@drawable/tj_left_rotate"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/rightRotate"
+            android:layout_width="32dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_right_rotate" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/rightRotate"
+            android:background="@drawable/tj_takephoto_back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <GridView
+            android:background="@color/white"
+            android:visibility="gone"
+            android:numColumns="2"
+            android:id="@+id/gv_muilt_file"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#121212"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/joint" />
+
+        <!--<Button
+            android:visibility="gone"
+            android:id="@+id/qiebian"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/tj_takephoto_qiebian" />-->
+
+        <Button
+            android:id="@+id/takePhotos"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/tj_takephoto_takephoto" />
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/tj_takephoto_upload" />
+    </RelativeLayout>
+
+</LinearLayout>

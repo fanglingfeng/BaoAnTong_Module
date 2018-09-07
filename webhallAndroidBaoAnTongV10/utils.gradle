@@ -1,0 +1,92 @@
+/**
+ *
+ * 工具类 gradle
+ */
+
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+/**
+ * 获取当前的Flavor类型 查找不到反回defaultName
+ *
+ * @param libName
+ * @param defaultName
+ * @return
+ */
+ext.getCurrentFlavor = { String libName, String defaultName ->
+    println "getCurrentFlavor args:" + libName + "," + defaultName
+
+    Gradle gradle = getGradle()
+    String  tskReqStr = gradle.getStartParameter().getTaskRequests().toString()
+    Pattern pattern;
+    if(tskReqStr.contains("assemble")) {
+        pattern = Pattern.compile(":" + libName + ":assemble(\\w+)(Sources)")
+    }
+    else {
+        pattern = Pattern.compile(":" + libName + ":generate(\\w+)(Sources)")
+    }
+
+    Matcher matcher = pattern.matcher(tskReqStr)
+
+    if(matcher.find()) {
+        String result = toLowerCaseFirstOne(matcher.group(1))
+
+        println "getCurrentFlavor:" + result
+        saveToLocal(libName, result)
+        return result.toString()
+    } else {
+        String result = getFromLocal(libName, defaultName)
+        println "getCurrentFlavor: no match one， return local or default:" + result
+        return result
+    }
+}
+
+
+/**
+ * 首字母转小写
+ * @param value
+ * @return
+ */
+def toLowerCaseFirstOne(String value){
+    if (value == null || value.isEmpty()) {
+        return ""
+    }
+
+    if(Character.isLowerCase(value.charAt(0))) {
+        return value;
+    } else {
+        return (new StringBuilder()).append(Character.toLowerCase(value.charAt(0))).append(value.substring(1)).toString();
+    }
+}
+
+/**
+ * 保存到本地
+ *
+ * @param key
+ * @param value
+ * @return
+ */
+def saveToLocal(String key, String value) {
+    File localFile = project.rootProject.file('local.properties')
+    // 保存进local.properties，防止编译的时候找不到
+    Properties properties = new Properties()
+    properties.load(localFile.newDataInputStream())
+    properties.setProperty(key, value);
+    properties.save(localFile.newDataOutputStream(), "update-"+ key + "[" + value + "]")
+}
+
+/**
+ *
+ * 从本地读取数据
+ *
+ * @param key
+ * @param defaultName
+ * @return
+ */
+def getFromLocal(String key, String defaultName) {
+    File localFile = project.rootProject.file('local.properties')
+    // 保存进local.properties，防止编译的时候找不到
+    Properties properties = new Properties()
+    properties.load(localFile.newDataInputStream())
+    return properties.get(key, defaultName)
+}

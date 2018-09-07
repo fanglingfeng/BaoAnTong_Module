@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10">
+
+        <TextView
+            android:id="@+id/tv_company_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="深圳市宝安区太极有限公司"
+            android:textColor="@color/tj_black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_company_isreal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_20"
+            android:text="(已认证)"
+            android:textColor="@color/tj_btn_green"
+            android:textSize="@dimen/space_15" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0.5"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_tyshxydm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10"
+        android:text="统一社会信用代码：tyky20180502"
+        android:textColor="@color/tj_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10">
+
+        <TextView
+            android:id="@+id/tv_frdbxm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="法人代表姓名：张三"
+            android:textColor="@color/tj_black" />
+        <TextView
+            android:id="@+id/tv_is_faren_auth"
+            android:textColor="@color/tj_btn_green"
+            android:layout_marginLeft="@dimen/space_20"
+
+            android:text="（已实名）"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/arrows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_frsfzh"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10"
+        android:text="法人身份证号：420984199209013335"
+        android:textColor="@color/tj_black" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0.5"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_5"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingTop="@dimen/space_5">
+
+        <TextView
+            android:id="@+id/tv_company_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/tj_gray_corner_shape"
+            android:paddingBottom="@dimen/space_2"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_8"
+            android:paddingTop="@dimen/space_2"
+            android:text="默认"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right">
+
+            <RelativeLayout
+                android:layout_marginRight="@dimen/space_5"
+                android:id="@+id/rl_to_auth"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/btn_toolbar_tv_selector"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/tj_srrz" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="去认证企业"
+                    android:textColor="@color/tj_light_blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginRight="@dimen/space_5"
+                android:id="@+id/rl_to_auth_faren"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/btn_toolbar_tv_selector"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/auth_faren" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="去实名法人代表"
+                    android:textColor="@color/tj_light_blue"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_delete_company"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_toolbar_tv_selector"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/delete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="删除"
+                android:textColor="@color/tj_light_blue"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_2"
+        android:background="@color/ios_default" />
+</LinearLayout>

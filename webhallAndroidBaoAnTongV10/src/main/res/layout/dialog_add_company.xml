@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_default"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/ios_default"
+        android:orientation="vertical"
+        android:padding="@dimen/space_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="企业信息"
+            android:textColor="@color/tj_light_blue"
+            android:textSize="@dimen/space_18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:background="@drawable/shape_white_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10">
+
+            <TextView
+                android:textColor="@color/tj_black"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="企业名称:"
+                android:textSize="@dimen/space_18"
+
+                />
+
+            <EditText
+                android:id="@+id/et_qymc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tj_black"
+
+                android:background="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:background="@drawable/shape_white_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10">
+
+            <TextView
+                android:textColor="@color/tj_black"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统一信用代码:"
+                android:textSize="@dimen/space_18"
+
+                />
+
+            <EditText
+                android:textColor="@color/tj_black"
+
+                android:id="@+id/et_tyxydm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:background="@drawable/shape_white_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10">
+
+            <TextView
+                android:textColor="@color/tj_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="法人代表:"
+                android:textSize="@dimen/space_18"
+
+                />
+
+            <EditText
+                android:textColor="@color/tj_black"
+
+                android:background="@null"
+                android:id="@+id/et_frdb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:background="@drawable/shape_white_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10">
+
+            <TextView
+                android:textColor="@color/tj_black"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="法人身份证号码:"
+                android:textSize="@dimen/space_18"
+
+                />
+
+            <EditText
+                android:textColor="@color/tj_black"
+
+                android:id="@+id/et_frsfzhm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10"
+        android:background="@drawable/bg_btn"
+        android:gravity="center"
+        android:padding="@dimen/space_10"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/space_18" />
+</LinearLayout>

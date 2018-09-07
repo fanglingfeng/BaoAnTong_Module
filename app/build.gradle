@@ -1,0 +1,162 @@
+apply plugin: 'com.android.application'
+apply plugin: 'seal'
+android {
+    dataBinding {
+        enabled = true
+    }
+    def projectRoot = project.getRootProject().rootDir.absolutePath
+
+// Folders may include AndroidManifest.xml files
+// 1. For gradle plugin 2.3.0 or higher, build-cache is default choice,
+// 2. But we should make sure snapshot-libs will be checked too.
+// 3. Free to add your folders for more customization
+    def manifestPath = [
+            // for AAR of Release
+            // see note below
+            projectRoot + '/build-cache',
+            projectRoot + '/webhallAndroidBaoAnTongV10',
+            // for AAR of SNAPSHOT
+            projectRoot + '/app/build/intermediates/exploded-aar'
+    ]
+
+    def removeAttrs = [
+            'android:label',
+            'android:theme'
+    ]
+
+    def replaceValues = [
+            'android:label',
+            'android:theme'
+    ]
+
+
+    seal {
+        enabled = true
+        manifests = manifestPath
+
+        appAttrs {
+            enabled = true
+            attrsShouldRemove = removeAttrs
+        }
+
+        appReplaceValues {
+            enabled = true
+            valuesShouldRemove = replaceValues
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.mst.activity"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "27.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk { abiFilters "armeabi-v7a" }
+    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+    signingConfigs {
+        myConfig {
+            storeFile file("xuexibao.keys")
+            storePassword "tyky\$123456"
+            keyAlias "tyky_czing"
+            keyPassword "tyky\$123456"//将这里的“**”替换成自己的信息
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.myConfig
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            signingConfig signingConfigs.myConfig
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {
+
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '25.3.0'
+                }
+            }
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    signingConfigs {//签名配置
+        release {//发布版签名配置
+            storeFile file("D://workspace/file/xuexibao.keys")//密钥文件路径
+            storePassword "tyky\$123456"//密钥文件密码
+            keyAlias "tyky_czing"//key别名
+            keyPassword "tyky\$123456"//key密码
+        }
+        debug {//debug版签名配置
+            storeFile file("D://workspace/file/xuexibao.keys")
+            storePassword "tyky\$123456"
+            keyAlias "tyky_czing"
+            keyPassword "tyky\$123456"
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api 'com.android.support:appcompat-v7:26.+'
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    //    compile project(path: ':webhallAndroidBaoAnTongV10', configuration: 'baseRelease')
+    //    compile project(':webhallAndroidBaoAnTongV10')
+//    compile project(':webhallAndroidBaoAnTongV10')
+//    implementation project(':webhallAndroidBaoAnTongV10')
+    api project(path: ':webhallAndroidBaoAnTongV10', configuration: 'default')
+//    compile 'com.android.support:multidex:'
+    api 'com.github.bumptech.glide:glide:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    api 'com.android.support:support-v4:26.1.0'
+    api 'com.google.code.gson:gson:2.3.1'
+
+    api 'com.contrarywind:Android-PickerView:3.2.5'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    api 'com.squareup.okhttp3:okhttp:3.8.1'
+    api 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+
+    api 'com.squareup.retrofit2:retrofit:2.1.0'
+    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api 'com.github.clans:fab:1.6.4'
+//    compile files('libs/imagescannersdk_pr.jar')
+    api 'org.jetbrains:annotations-java5:15.0'
+    api 'com.squareup.picasso:picasso:2.5.2'
+    api 'com.github.TYKYTeam:AndroidBase:1.1.42'
+    //多图选择器
+    api 'cn.finalteam:galleryfinal:1.4.8.7'
+    api 'com.google.guava:guava:20.0'
+    api 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    //图片放大缩
+    api 'com.bm.photoview:library:1.4.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+
+    //    compile(name: 'WbCloudFaceVerifySdk.aar', ext: 'aar')
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.8.2@aar'
+}

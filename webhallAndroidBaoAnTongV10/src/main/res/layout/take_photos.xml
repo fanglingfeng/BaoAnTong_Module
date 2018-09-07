@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#1b1b1b"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_center_tv"/>
+
+        <RelativeLayout
+            android:id="@+id/rotateBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#121212"
+            android:padding="@dimen/space_10"
+            android:visibility="visible">
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/leftRotate"
+                android:layout_width="@dimen/space_35"
+                android:layout_height="@dimen/space_50"
+                android:background="@mipmap/left_rotate"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+        <com.bm.library.PhotoView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/space_10">
+
+            <RelativeLayout
+                android:id="@+id/rightRotate"
+                android:layout_width="@dimen/space_100"
+                android:layout_height="@dimen/space_35"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:clickable="true"
+                android:tag="skin:btn_toolbar_tv_selector:background"
+                android:background="@drawable/btn_toolbar_tv_selector">
+
+                <ImageView
+                    android:id="@+id/rotate_iv"
+                    android:layout_width="@dimen/space_23"
+                    android:layout_height="@dimen/space_23"
+                    android:layout_centerVertical="true"
+                    android:tag="skin:right_rotate1:src"
+                    android:src="@mipmap/right_rotate1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_toRightOf="@id/rotate_iv"
+                    android:text="旋转"
+                    android:textColor="@color/colorPrimary"
+                    android:tag="skin:colorPrimary:textColor"
+                    android:textSize="@dimen/text_size_16"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/takePhotos"
+                android:layout_width="@dimen/space_100"
+                android:layout_height="@dimen/space_35"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:tag="skin:btn_toolbar_tv_selector:background"
+                android:background="@drawable/btn_toolbar_tv_selector">
+
+                <ImageView
+                    android:id="@+id/takePhotosIv"
+                    android:layout_width="@dimen/space_23"
+                    android:layout_height="@dimen/space_23"
+                    android:background="@mipmap/takephoto_takephoto1"
+                    android:tag="skin:takephoto_takephoto1:background"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_7"
+                    android:layout_toRightOf="@id/takePhotosIv"
+                    android:text="重拍"
+                    android:textColor="@color/colorPrimary"
+                    android:tag="skin:colorPrimary:textColor"
+                    android:textSize="@dimen/text_size_16"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/add"
+                android:layout_width="@dimen/space_100"
+                android:layout_height="@dimen/space_35"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:clickable="true"
+                android:layout_alignParentRight="true"
+                android:tag="skin:btn_toolbar_tv_selector:background"
+                android:background="@drawable/btn_toolbar_tv_selector">
+
+
+                <ImageView
+
+                    android:id="@+id/add_iv"
+                    android:layout_width="@dimen/space_23"
+                    android:layout_height="@dimen/space_23"
+                    android:background="@mipmap/joint1"
+                    android:tag="skin:joint1:background"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/add_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_7"
+                    android:text="多图合成"
+                    android:layout_toRightOf="@id/add_iv"
+                    android:textColor="@color/colorPrimary"
+                    android:tag="skin:colorPrimary:textColor"
+                    android:textSize="@dimen/text_size_16"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

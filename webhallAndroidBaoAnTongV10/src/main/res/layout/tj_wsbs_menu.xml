@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+
+    
+    <Button
+        android:id="@+id/wsbs_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tj_wsbs_search_selector"
+        android:textStyle="bold"/>
+        <Button
+        android:id="@+id/wsbs_reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:background="@drawable/tj_wsbs_reserve_selector"
+        android:textStyle="bold" />
+	
+    <Button
+        android:id="@+id/wsbs_dealwith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:background="@drawable/tj_wsbs_dealtwith_selector"
+        android:textStyle="bold" />
+    
+    <Button
+        android:id="@+id/wsbs_erweima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/tj_wsbs_erweima_selector"
+        android:textStyle="bold" />
+    <Button
+        android:layout_marginRight="20dip"
+        android:id="@+id/wsbs_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tj_wsbs_favorite_selector"
+        android:textStyle="bold" />
+
+</LinearLayout>

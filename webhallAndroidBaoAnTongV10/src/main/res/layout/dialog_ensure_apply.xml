@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_default"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ios_default"
+        android:orientation="vertical"
+        android:padding="@dimen/space_10">
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/ios_default"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="深圳市宝安区网上办事承诺书"
+            android:textColor="@color/tj_light_blue"
+            android:textSize="@dimen/space_20" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:padding="@dimen/space_10"
+            android:text="@string/about_us_tv"
+            android:textColor="@color/tj_black"
+            android:textSize="@dimen/space_17"
+
+            />
+        <RelativeLayout
+            android:paddingLeft="@dimen/space_10"
+            android:paddingRight="@dimen/space_10"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <CheckBox
+                android:layout_centerVertical="true"
+                android:id="@+id/cb_ensure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cb_ensure"
+                android:layout_marginLeft="@dimen/space_20"
+                android:text="我已经阅读并且同意以上条款"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:background="@drawable/tj_gray_btn_shape"
+            android:gravity="center"
+            android:padding="@dimen/space_10"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_18" />
+    </LinearLayout>
+
+</LinearLayout>

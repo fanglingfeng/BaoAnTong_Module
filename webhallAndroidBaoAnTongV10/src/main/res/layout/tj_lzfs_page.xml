@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tj_gray_bg" >
+	
+    <TextView
+        android:id="@+id/empty_permid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="请到政务服务中心现场领取证照!"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+	
+        <LinearLayout
+            android:id="@+id/parent_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/tj_white"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/blms_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="办理模式:此事项全流程网上办理"
+                        android:textColor="@color/tj_my_green"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+               <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:padding="5dp"
+                android:background="@color/tj_white"
+                android:orientation="horizontal"
+                 >
+				<TextView 
+				    android:layout_width="wrap_content"
+				    android:layout_height="30dp"
+				    android:gravity="center_vertical"
+				    android:text="业务归属地："
+				    android:textColor="@color/tj_black"/>
+                   <Spinner
+                    android:id="@+id/parent_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tj_bg_spinner"
+                    android:spinnerMode="dropdown" />
+                   <Spinner
+                    android:id="@+id/child_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/tj_bg_spinner"                   
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+	
+            <LinearLayout
+                android:id="@+id/DJCLparent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/tj_white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" >
+
+                    <TextView
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/tj_my_green" />
+
+                    <TextView
+                        android:id="@+id/chooseDJCL_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="请选择递交材料方式:"
+                        android:textColor="@color/tj_black" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/lzfs_bg_shape"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+
+                    <RadioGroup
+                        android:id="@+id/DJRidaoGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/WDDJ"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  网点递交"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/YJDJ"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  邮寄递交"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="8dp"
+                        android:background="@color/tj_gray_bg" />
+
+                    <com.tjsoft.webhall.lib.ListViewForScrollView
+                        android:id="@+id/WDDJ_address_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </com.tjsoft.webhall.lib.ListViewForScrollView>
+
+                    <com.tjsoft.webhall.lib.ListViewForScrollView
+                        android:id="@+id/YJDJ_address_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </com.tjsoft.webhall.lib.ListViewForScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LZFSparent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/tj_white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/tj_my_green" />
+
+                    <TextView
+                        android:id="@+id/chooseLZFS_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="请选择领取证照方式:"
+                        android:textColor="@color/tj_black" >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/tj_gray_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/lzfs_bg_shape"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/WDLQ"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  网点领取"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/YJLQ"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  邮寄领取"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/ZXDY"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  自行打印"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="8dp"
+                        android:background="@color/tj_gray_bg" />
+					<TextView android:id="@+id/recever_tip"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/tj_gray"                      
+					    android:text="承诺办理时限:XX工作日，具体结果以短信通知为主"/>
+                    <com.tjsoft.webhall.lib.ListViewForScrollView
+                        android:id="@+id/WDLQ_address_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </com.tjsoft.webhall.lib.ListViewForScrollView>
+					
+                    <RelativeLayout
+                        android:id="@+id/addAddress_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:visibility="visible" >
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tj_red"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/address_emptp_tip"
+                            android:text="添加邮寄地址>>"
+                            />
+                        <RelativeLayout 
+                            android:id="@+id/address_info_detail"
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content">
+                      <TextView 
+                          android:id="@+id/RECEIVE_tip"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/tj_gray"
+                          android:text="收  件  人："/>
+                      <TextView 
+                          android:id="@+id/RECEIVE"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_toRightOf="@+id/RECEIVE_tip"
+                          android:textColor="@color/tj_gray"
+                          android:text=""/>
+                      <TextView 
+                          android:id="@+id/PHONE"
+                          android:layout_width="match_parent"
+                          android:textColor="@color/tj_gray"
+                          android:layout_height="match_parent"
+                          android:layout_toRightOf="@+id/RECEIVE"
+                          android:layout_marginLeft="30dp"
+                          android:text=""/>
+                      <TextView 
+                          android:id="@+id/address_tip"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="5dp"
+                          android:textColor="@color/tj_gray"
+                          android:layout_below="@+id/RECEIVE_tip"
+                          android:text="收货地址："/>
+                      <TextView 
+                          android:id="@+id/ADDRESS"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="5dp"
+                          android:layout_toRightOf="@+id/address_tip"                  
+                          android:layout_below="@+id/RECEIVE_tip"
+                          android:text=""
+                          android:textColor="@color/tj_gray"
+                          />
+                      	<ImageView 
+                      	    android:layout_width="20dp"
+                      	    android:layout_height="20dp"
+                      	    android:layout_alignParentRight="true"
+                      	    android:layout_centerVertical="true"
+                      	    android:background="@drawable/tj_arrows"/>
+                      	</RelativeLayout>
+                    </RelativeLayout>
+                
+                </LinearLayout>
+            
+            </LinearLayout>
+        
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

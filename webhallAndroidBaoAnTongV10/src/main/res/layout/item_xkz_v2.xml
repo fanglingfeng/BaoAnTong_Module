@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+
+        <variable
+            name="xkzkjbean"
+            type="com.tjsoft.webhall.entity.XKZKJBean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_upload_status"
+            android:textSize="@dimen/space_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/tj_btn_green"
+            android:paddingBottom="@dimen/space_4"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_8"
+            android:paddingTop="@dimen/space_4"
+            android:text="已上传"
+            android:textColor="@color/white" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_xkz_title"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_50"
+                android:textSize="@dimen/space_16"
+                android:text="危险化学平经营许可证"
+                android:textColor="@color/tj_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/edit_hint_color"
+                android:id="@+id/tv_xkz_code"
+                android:layout_marginBottom="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_50"
+                android:layout_marginLeft="@dimen/space_10"
+                android:text="编号：001"
+                android:layout_below="@+id/tv_xkz_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/arrows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+        <ImageView
+            android:background="@color/ios_default"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_0.6" />
+        <TextView
+            android:background="@drawable/item_recycler_background"
+            android:visibility="visible"
+            android:id="@+id/tv_loadmore"
+            android:gravity="center"
+            android:text="加载更多"
+            android:textColor="@color/tj_black"
+            android:padding="@dimen/space_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,204 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.jakewharton.butterknife'
+apply from: './utils.gradle'
+android {
+    // 关键步骤2： 修改默认的发布config
+    defaultPublishConfig(getCurrentFlavor(project.name, "baoanRelease"))
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+    useLibrary 'org.apache.http.legacy'
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    defaultConfig {
+        multiDexEnabled true
+        flavorDimensions "versionCode"
+//        applicationId "com.tjsoft.msfw.guangdongshenzhenbaoan"
+//        flavorDimensions "1"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+    dataBinding {
+        enabled = true
+    }
+    signingConfigs {
+        myConfig {
+            storeFile file("xuexibao.keys")
+            storePassword "tyky\$123456"
+            keyAlias "tyky_czing"
+            keyPassword "tyky\$123456"//将这里的“**”替换成自己的信息
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.myConfig
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            lintOptions {
+
+                checkReleaseBuilds false
+
+                abortOnError false
+
+            }
+            signingConfig signingConfigs.myConfig
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+//        }
+//    }
+    configurations.all {
+
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '25.3.0'
+                }
+            }
+        }
+    }
+//    publishNonDefault true
+    productFlavors {
+        baoan{
+//            flavorDimensions "1"
+            dependencies {
+//                本地跑demo用这个
+//                baoanCompile files('libs/BaiduLBS_Android.jar')
+//                baoanCompile files('libs/imageloader.jar')
+//                baoanCompile files('libs/locSDK_5.2.jar')
+//                baoanCompile files('libs/Msc.jar')
+//                baoanCompile files('libs/Sunflower.jar')
+//                baoanCompile files('libs/uk-co-senab-photoview.jar')
+//                baoanCompile files('libs/zxing.jar')
+                //打app测试demo时用下面的代码或者给平安
+//               implementation files('libs/BaiduLBS_Android.jar')
+//               implementation files('libs/imageloader.jar')
+//               implementation files('libs/locSDK_5.2.jar')
+//               implementation files('libs/Msc.jar')
+//               implementation files('libs/Sunflower.jar')
+//               implementation files('libs/uk-co-senab-photoview.jar')
+//               implementation files('libs/zxing.jar')
+//               implementation files('libs/classes.jar')
+//               implementation project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
+
+
+
+//                gradlew assemblerelease
+
+//                打aar包用下面的，provided 代表这些jar包是别人有的，不用打到包里面
+               baoanCompileOnly files('libs/zxing.jar')
+               baoanCompileOnly files('libs/BaiduLBS_Android.jar')
+               baoanCompileOnly files('libs/imageloader.jar')
+               baoanCompileOnly files('libs/locSDK_5.2.jar')
+               baoanCompileOnly files('libs/Msc.jar')
+               baoanCompileOnly files('libs/Sunflower.jar')
+               baoanCompileOnly files('libs/uk-co-senab-photoview.jar')
+               baoanCompileOnly files('libs/classes.jar')
+               baoanCompileOnly project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
+
+            }
+        }
+        shenzhen{
+//            flavorDimensions "1"
+            dependencies{
+                shenzhenImplementation files('libs/BaiduLBS_Android.jar')
+                shenzhenImplementation files('libs/imageloader.jar')
+                shenzhenImplementation files('libs/locSDK_5.2.jar')
+                shenzhenImplementation files('libs/Msc.jar')
+                shenzhenImplementation files('libs/Sunflower.jar')
+                shenzhenImplementation files('libs/uk-co-senab-photoview.jar')
+                shenzhenImplementation files('libs/zxing.jar')
+                shenzhenImplementation files('libs/classes.jar')
+                shenzhenImplementation files('libs/imagescannersdk_pr.jar')
+
+//下面的不打到aar里面
+//                shenzhenProvided files('libs/BaiduLBS_Android.jar')
+//                shenzhenProvided files('libs/imageloader.jar')
+//                shenzhenProvided files('libs/locSDK_5.2.jar')
+//                shenzhenProvided files('libs/Msc.jar')
+//                shenzhenProvided files('libs/Sunflower.jar')
+//                shenzhenProvided files('libs/uk-co-senab-photoview.jar')
+//                shenzhenProvided files('libs/zxing.jar')
+//                shenzhenProvided files('libs/classes.jar')
+//                shenzhenProvided project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
+
+            }
+        }
+//        pingan{
+//            dependencies{
+////                pinganCompile files('libs/BaiduLBS_Android.jar')
+////                pinganCompile files('libs/imageloader.jar')
+////                pinganCompile files('libs/locSDK_5.2.jar')
+////                pinganCompile files('libs/Msc.jar')
+////                pinganCompile files('libs/Sunflower.jar')
+////                pinganCompile files('libs/uk-co-senab-photoview.jar')
+////                pinganCompile files('libs/zxing.jar')
+////                pinganProvided files('libs/classes.jar')
+//
+////下面的不打到aar里面
+//                pinganCompileOnly files('libs/BaiduLBS_Android.jar')
+//                pinganCompileOnly files('libs/imageloader.jar')
+//                pinganCompileOnly files('libs/locSDK_5.2.jar')
+//                pinganCompileOnly files('libs/Msc.jar')
+//                pinganCompileOnly files('libs/Sunflower.jar')
+//                pinganCompileOnly files('libs/uk-co-senab-photoview.jar')
+//                pinganCompileOnly files('libs/zxing.jar')
+//                pinganCompileOnly files('libs/classes.jar')
+//                pinganCompileOnly project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
+//
+//            }
+//        }
+    }
+
+
+}
+
+
+dependencies {
+    api 'com.github.bumptech.glide:glide:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    api 'com.android.support:support-v4:26.1.0'
+    api 'com.google.code.gson:gson:2.3.1'
+    api files('libs/CWAC-AdapterWrapper.jar')
+    api files('libs/CWAC-EndlessAdapter.jar')
+    api files('libs/ksoap.jar')
+    api files('libs/imagescannersdk_pr.jar')
+    api 'com.contrarywind:Android-PickerView:3.2.5'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    api 'com.squareup.okhttp3:okhttp:3.8.1'
+    api 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+
+   api 'com.squareup.retrofit2:retrofit:2.1.0'
+   api 'com.squareup.retrofit2:converter-gson:2.1.0'
+   api 'com.github.clans:fab:1.6.4'
+//    compile files('libs/imagescannersdk_pr.jar')
+   api 'org.jetbrains:annotations-java5:15.0'
+   api 'com.squareup.picasso:picasso:2.5.2'
+   api 'com.github.TYKYTeam:AndroidBase:1.1.42'
+    //多图选择器
+  api 'cn.finalteam:galleryfinal:1.4.8.7'
+  api 'com.google.guava:guava:20.0'
+  api 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    //图片放大缩
+    api 'com.bm.photoview:library:1.4.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    api files('libs/ocr-sdk.jar')
+    api project(path: ':ocr_ui')
+    //    compile(name: 'WbCloudFaceVerifySdk.aar', ext: 'aar')
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.8.2@aar'
+
+}

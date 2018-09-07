@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaoAnTong_Module.iml" filepath="$PROJECT_DIR$/BaoAnTong_Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391/WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391.iml" filepath="$PROJECT_DIR$/WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391/WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webhallAndroidBaoAnTongV10/webhallAndroidBaoAnTongV10.iml" filepath="$PROJECT_DIR$/webhallAndroidBaoAnTongV10/webhallAndroidBaoAnTongV10.iml" />
+    </modules>
+  </component>
+</project>

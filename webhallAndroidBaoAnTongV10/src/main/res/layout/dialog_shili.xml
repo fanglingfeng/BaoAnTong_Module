@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_10"
+    android:background="@color/tran">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_5">
+
+        <ImageView
+            android:layout_width="@dimen/space_200"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@mipmap/example1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">>
+
+            <ImageView
+
+                android:layout_width="@dimen/space_30"
+                android:layout_height="@dimen/space_30"
+                android:background="@mipmap/right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="正确拍摄" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_5">
+
+        <ImageView
+            android:layout_width="@dimen/space_200"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@mipmap/example2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">>
+
+            <ImageView
+
+                android:layout_width="@dimen/space_30"
+                android:layout_height="@dimen/space_30"
+                android:background="@mipmap/wrong" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="文件倾斜" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_5">
+
+        <ImageView
+            android:layout_width="@dimen/space_200"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@mipmap/example3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">>
+
+            <ImageView
+
+                android:layout_width="@dimen/space_30"
+                android:layout_height="@dimen/space_30"
+                android:background="@mipmap/wrong" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="内容模糊" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/tran"
+        android:gravity="center">
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/close" />
+    </RelativeLayout>-->
+</LinearLayout>

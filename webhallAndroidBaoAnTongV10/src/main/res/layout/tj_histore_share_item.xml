@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tj_white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/tj_red"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="已共享"
+        android:textColor="@color/tj_white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/tj_editxt_bg" >
+
+        <ImageView
+            android:id="@+id/tj_pc"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/tj_pc"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tj_isPhone"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tj_pc"
+            android:background="@color/tj_is_share"
+            android:gravity="center"
+            android:text="纸"
+            android:textColor="@color/tj_white" />
+
+        <ImageButton
+            android:id="@+id/status"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/SFBY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@id/status"
+            android:layout_toRightOf="@+id/tj_isPhone"
+            android:text="*"
+            android:textColor="@color/tj_red" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@id/status"
+            android:layout_toRightOf="@id/SFBY"
+            android:text="房屋租赁合同书" />
+
+        <TextView
+            android:id="@+id/shyj"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:text="审核意见"
+            android:textColor="@color/tj_red"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/tj_arrows" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/choosePhoto"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/tj_choose_photo"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/chooseFile"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/tj_choose_file"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/download"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/tj_download_file"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

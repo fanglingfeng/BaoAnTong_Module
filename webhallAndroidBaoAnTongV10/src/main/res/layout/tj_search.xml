@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/tj_white"
+            android:focusable="true"
+    android:focusableInTouchMode="true"  >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/tj_nav_bg" >
+                <RelativeLayout
+                    android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/tj_back_selector" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="进度查询"
+                    android:textColor="@color/tj_white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/more"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/tj_more"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+               
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingTop="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="在线办事细目搜索"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/permName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="服务事项名称"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/findByName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/tj_online_declaration_selector"
+                    android:text="查询"
+                    android:textColor="@color/tj_white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="办事进度检索"
+                    android:textSize="16sp" />
+                
+
+
+
+
+                <EditText
+                    android:id="@+id/appName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="输入姓名"
+                    android:textSize="16sp" />
+                                <RelativeLayout
+                                    android:layout_marginTop="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/bsNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:hint="输入业务流水号"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/erweima"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/tj_erweima" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/findProgress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/tj_online_booking_selector"
+                    android:text="查询"
+                    android:textColor="@color/tj_white"
+                    android:textSize="18sp" />
+                
+                
+                <TextView 
+                    android:textColor="#7D7D7D"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="注：可点击二维码扫描按钮，扫描“业务受理回执单”上的二维码进行进度查询。"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/MAINTITLE"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:singleLine="true"
+        android:text="商事问题爱上大声地"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/CREATETIME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MAINTITLE"
+        android:layout_marginBottom="5dp"       
+        android:text="2014-4-17"
+        android:textColor="#919499" />
+
+    <ImageView
+        android:id="@+id/SFHF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CREATETIME"        
+        android:background="@drawable/tj_replied" />
+        <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/tj_arrows"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

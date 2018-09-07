@@ -1,0 +1,8 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tj_activity_horizontal_margin">16dp</dimen>
+    <dimen name="tj_activity_vertical_margin">16dp</dimen>
+    <dimen name="tj_shadow_width">1px</dimen>
+	<dimen name="tj_text_14sp">14sp</dimen>
+</resources>

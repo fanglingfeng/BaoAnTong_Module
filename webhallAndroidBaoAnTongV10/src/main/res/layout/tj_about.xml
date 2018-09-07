@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tj_nav_bg" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tj_back_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="关于我们"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        
+    </RelativeLayout>
+
+
+
+    
+
+    <ScrollView
+        android:id="@+id/explain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="        深圳太极软件有限公司成立于1990年，是在原国家机械电子工业部支持下成立的高科技软件企业。公司注册资金3528万元，现有员工400余人。公司本部位于深圳高新技术园区，在广州、武汉、杭州、重庆、沈阳、郑州、贵阳设有分公司，在惠州仲恺、天津宝坻、牡丹江、河北迁安等地建有云计算中心。
+            \n        自成立以来，深圳太极锐意创新、积极进取，致力于我国国民经济和社会信息化工作，承担并完成了众多大型信息系统项目，取得了卓越的成绩。早在2000年就倡导“整体设计、系统建设”的电子政务模式，重点开发各类区域型电子政务应用系统。在2004年率先基于SCADA原理开发了深圳市行政审批电子监察系统，创新了行政监察型（DJC）电子政务应用。同时，公司还相继将电子监察范围扩展到对40多种行政业务的综合电子监察，对省、市、县（区）、镇（街）、村五级行政机构的联网电子监察，对政务信息资源共享的监管以及政府综合绩效评估等，引领了全国行政电子监察的发展。深圳太极电子监察业务范围覆盖20多个省、直辖市，共承建了600多个项目，为各地政府廉政建设做出了贡献。
+            \n        从2009年开始，公司与时俱进，投入大量资金和人力发展云计算业务。公司创新研发了国内外一流的云数据、云资源聚合中间件、云服务中间件等全线云技术产品；构建了信息基础设施云化服务平台和综合信息云服务平台；在全国率先推出基础教育云；总结了建设区域云计算中心、提供综合性云服务、支持区域经济社会发展与转型升级的云计算业务模式。随着云计算业务的开展、业务模式的调整，公司业务规模迅速扩大，效益迅速提高，正在进入高成长阶段。\n        经过20多年的历炼，深圳太极已经发展成为颇具实力的全国云计算应用先导企业和电子政务专业公司。今后，深圳太极将适应我国信息化不断发展需要，以先进的云计算理念、全新的云业务模式、整套的云技术产品和对用户周到的服务，投身到我国新一代信息技术应用的巨大变革之中，实现造“云”吐“务”微云极天的战略目标。"
+            android:textColor="@color/tj_black"
+            android:textSize="16sp" />
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391.aar'))

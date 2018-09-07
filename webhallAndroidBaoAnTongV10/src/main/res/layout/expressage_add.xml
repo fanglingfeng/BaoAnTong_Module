@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tj_nav_bg" >
+
+		<RelativeLayout 
+	    	android:id="@+id/back"
+	    	android:layout_width="50dp"
+	    	android:layout_height="match_parent">
+        	<ImageView            
+            	android:layout_width="25dp"
+            	android:layout_height="25dp"
+            	android:layout_centerVertical="true"
+            	android:layout_marginLeft="10dp"
+            	android:background="@drawable/tj_back_selector" />
+		</RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="添加地址"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="保存"
+            android:textColor="@color/tj_white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="收  件  人：" />
+
+        <EditText
+            android:id="@+id/RECEIVE"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="联系电话：" />
+
+        <EditText
+            android:id="@+id/PHONE"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="地        址：" />
+
+        <EditText
+            android:id="@+id/ADDRESS"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="邮政编码：" />
+
+        <EditText
+            android:id="@+id/POSTCODE"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

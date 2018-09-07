@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/tj_editxt_bg" >
+        <ImageView 
+		    android:id="@+id/more_title_iv"
+		    android:layout_width="25dp"
+		    android:layout_height="25dp"
+		    android:layout_marginRight="10dp"		    
+		    android:layout_alignParentRight="true"
+		    android:background="@drawable/tj_tip_title"/>
+        <TextView
+            android:id="@+id/nameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/more_title_iv"
+            android:gravity="left"
+            android:ellipsize="end"           
+            android:maxLines="1"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="申请人身份证申请人身份证申请人身份证申请人身份证申请人身份证申请人身份证" />
+
+		<TextView
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/tj_red"
+            android:id="@+id/SFBY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="*" />
+        <RelativeLayout
+            android:id="@+id/image_rl"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/nameTitle"
+            
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/no_submit" />
+
+            <LinearLayout
+                android:id="@+id/imags_parent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/status"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/tj_file_itme_bg_shape"
+                android:orientation="horizontal" >
+           
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/addImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/add_img" />
+
+        </RelativeLayout>
+        <TextView 
+            android:id="@+id/SHYJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_rl"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/tj_red"
+            android:text="不通过"/>
+    </RelativeLayout>
+
+</LinearLayout>

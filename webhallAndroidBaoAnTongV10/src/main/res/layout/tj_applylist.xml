@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tj_white" >
+
+    
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="15dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="办理本事项需填报以下电子化材料："
+                android:textColor="#ff6105"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="一、基本表"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/formList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#777777" 
+            />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#cc828282" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="二、证照（手机上传或空间上传）"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/license"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+              android:textColor="#777777"  />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#cc828282" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="三、大附件（手机上传或空间上传）"
+                android:textSize="16sp" />
+  
+
+            <TextView
+                android:id="@+id/bigFile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#777777"  />
+            
+            
+                      <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#cc828282" />
+                        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="四、申请表"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/applyForm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#777777"  />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

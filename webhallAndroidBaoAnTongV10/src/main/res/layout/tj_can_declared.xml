@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tj_white" >
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#0fffffff"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/chooseArea1"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/tj_spinner_box"
+            android:textColor="@color/tj_white"
+            android:textSize="17sp" />
+
+        <Button
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择地区" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/deptList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#dddddd"
+        android:dividerHeight="1px" />
+
+    <ImageView
+        android:id="@+id/empty"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/tj_empty"
+        android:contentDescription="@null" />
+
+</LinearLayout>

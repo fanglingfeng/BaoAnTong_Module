@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tj_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+   <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/tj_nav_bg" >
+
+                <RelativeLayout
+                    android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" >
+               
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/tj_back_selector" />
+                </RelativeLayout>
+                 <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="在线咨询"
+                    android:textColor="@color/tj_white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/tj_white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/tj_online_booking_selector"
+            android:padding="5dp"
+            android:text="  搜索  "
+            android:textColor="@color/tj_white"
+            android:textSize="17sp" />
+        
+        <Button
+            android:visibility="gone"
+            android:id="@+id/addConsult"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:background="@drawable/tj_consult_btn_style" />
+
+        <EditText
+            android:id="@+id/MAINTITLE"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/search"
+            android:background="@drawable/tj_bg_main_search"
+            android:hint="请输入主题关键字"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.tjsoft.webhall.lib.XListView
+        android:id="@+id/consultList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.tjsoft.webhall.lib.XListView>
+    <ImageView
+        android:id="@+id/empty"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/tj_empty"
+        android:contentDescription="@null" />
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tj_list_item_selector"
+    android:paddingBottom="10dp" >
+
+    <TextView
+        android:id="@+id/NODENAME"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/tj_ic_flow_pass"
+        android:gravity="center"
+        android:text="审核"
+        android:textColor="@color/tj_white"
+        android:textSize="14sp" />
+    
+    
+    <ImageView 
+        android:id="@+id/imgNext"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@id/NODENAME"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/tj_ic_down_arrow"/>
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/INFO"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/NODENAME"
+        android:background="@drawable/tj_ic_msg_bg"
+        android:text="办理意见：申请受理前公示延长5个工作日。\n办理时间：11111111111111111111"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/permCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="45dp"
+        android:textColor="@color/tj_gray"
+        android:textSize="14sp" />
+
+</RelativeLayout>

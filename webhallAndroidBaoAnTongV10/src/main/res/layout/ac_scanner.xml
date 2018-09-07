@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_56"
+            android:background="@android:color/black">
+
+            <include layout="@layout/toolbar_center" />
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_trim"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/delcut_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/qiebian">
+
+                    <ImageView
+                        android:id="@+id/trash_iv"
+                        android:layout_width="@dimen/space_20"
+                        android:layout_height="@dimen/space_20"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_30"
+                        android:src="@drawable/trash" />
+
+                    <ImageView
+                        android:id="@+id/cut_iv"
+                        android:layout_width="@dimen/space_20"
+                        android:layout_height="@dimen/space_20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_30"
+                        android:src="@drawable/cut" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/btns"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/qiebian"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/bt_quanping"
+                            android:layout_width="@dimen/space_20"
+                            android:layout_height="@dimen/space_20"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:src="@mipmap/crop_zoom_icon_white" />
+
+                        <ImageView
+                            android:id="@+id/bt_rotate_reserve"
+                            android:layout_width="@dimen/space_20"
+                            android:layout_height="@dimen/space_20"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:src="@mipmap/crop_left_rotation_icon_white" />
+
+                        <ImageView
+                            android:id="@+id/bt_rotate"
+
+                            android:layout_width="@dimen/space_20"
+                            android:layout_height="@dimen/space_20"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:src="@mipmap/crop_right_rotation_icon_white" />
+
+                        <ImageView
+                            android:id="@+id/bt_enhance"
+                            android:layout_width="@dimen/space_20"
+                            android:layout_height="@dimen/space_20"
+                            android:layout_weight="1"
+                            android:src="@mipmap/crop_confirm" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.tjsoft.webhall.widget.CustomViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space_60" />
+
+                <TextView
+                    android:id="@+id/imagenum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/space_60"
+                    android:background="@drawable/images_bg"
+                    android:textColor="@color/white"
+                    tools:text="2/2" />
+
+                <com.intsig.view.ImageEditView
+                    android:id="@+id/iv_trim"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space_60"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_enhance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/sp_enhance_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_spinner_selector"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/sp_img_type_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_enhance_mode"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_spinner_selector"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/q_btns"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/qiebian"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <ImageView
+                        android:id="@+id/bt_back_trim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/back_b" />
+
+                    <ImageView
+                        android:id="@+id/bt_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/finish" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_enhance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/q_btns"
+                    android:layout_below="@id/sp_img_type_mode"
+                    android:scaleType="fitCenter" />
+            </RelativeLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</layout>

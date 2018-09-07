@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/tj_nav_bg" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tj_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="服务说明"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        
+    </RelativeLayout>
+
+
+
+    
+
+    <ScrollView
+        android:id="@+id/explain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+              android:lineSpacingExtra="2dp"
+           android:lineSpacingMultiplier="1.8"
+            android:text="一、请于业务预受理通过后到服务网点窗口（邮政服务）递交纸质材料，并于业务办结后选择到服务网点（邮政服务或“我的办事厅”自行打印）领取审批结果。\n
+二、网点递交：业务“网上预审通过”短信通知您到网点递交原件。\n
+三、 网点领取：业务“办结”短信通知您到网点领取结果证件。\n
+四、 邮政速递递交：业务“网上预审通过”短信通知您，请通过邮政递交原件。\n
+五、邮政速递领取：业务“办结”短信通知您业务已经办结并通过中国邮政速递结果证件给您，请 查收。选择此种方式领证，证照寄发之日视为已送达办事人。如快递过程中证照遗失，申请人需按补证程序重新申请发证。中国邮政速递费用按EMS收费标准采用到付的方式由申请人自行支付。"
+            android:textColor="@color/tj_black"
+            android:textSize="16sp" />
+    </ScrollView>
+
+</LinearLayout>

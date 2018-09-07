@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/root_parent"
+    android:background="#F0F0F0"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/tj_nav_bg" >
+
+                <RelativeLayout
+                    android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/tj_back_selector" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/chooseArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/area_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tj_transparent"
+                        android:text="选择事项申报"
+                        android:textColor="@color/tj_white"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/tj_arrow_down"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/title_radio_group"
+                    android:layout_width="180dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <RadioButton
+                        android:id="@+id/title_rb1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/tj_left_tag_style"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="网上申报事项"
+                        android:textColor="@color/tj_black"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/title_rb2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/tj_right_tag_style"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="全部事项"
+                        android:textColor="@color/tj_white"
+                        android:textSize="13sp" />
+                </RadioGroup>
+
+                <ImageButton
+                    android:id="@+id/btnMore"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:src="@drawable/tj_btn_main_more"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/home"
+                    android:layout_width="28dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/tj_help"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/tj_white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/tj_online_booking_selector"
+                    android:padding="5dp"
+                    android:text="  搜索  "
+                    android:textColor="@color/tj_white"
+                    android:textSize="17sp" />
+
+                <com.tjsoft.webhall.lib.SearchEditText
+                    android:id="@+id/textSearch"
+                    style="@style/editTextStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/btnSearch"
+                    android:background="@drawable/tj_bg_main_search"
+                    android:paddingLeft="10dp"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/voice_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="23dp"
+                    android:layout_toLeftOf="@id/btnSearch"
+                    android:background="@drawable/tj_voice_selector" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="10dp"
+                android:background="@color/tj_gray" />
+
+            <ScrollView
+                android:id="@+id/canDeclareLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="个人办事"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#E6E6E6" />
+
+                    <com.tjsoft.webhall.lib.GridViewForScrollView
+                        android:id="@+id/canDeclareList1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tj_white"
+                        android:listSelector="@drawable/bg_gv"
+                        android:numColumns="2"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:text="企业办事"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#E6E6E6" />
+
+                    <com.tjsoft.webhall.lib.GridViewForScrollView
+                        android:id="@+id/canDeclareList2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tj_white"
+                        android:listSelector="@drawable/bg_gv"
+                        android:numColumns="2"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/allPerms"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/tj_white" >
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="按主题分类"
+                        android:textColor="#00A8E9"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="按部门分类"
+                        android:textColor="#838094"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f0f0f0" >
+
+                    <ImageView
+                        android:id="@+id/cursor"
+                        android:layout_width="160dp"
+                        android:layout_height="2dp"
+                        android:background="@color/tj_my_green"
+                        android:contentDescription="@null"
+                        android:scaleType="matrix" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="1.5dp"
+                        android:background="#dddddd" />
+                </RelativeLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vPager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:background="@color/tj_white"
+                    android:flipInterval="30"
+                    android:persistentDrawingCache="animation" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/wsbs_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/tj_wsbs_more_selector"
+        android:visibility="gone" />
+
+</RelativeLayout>

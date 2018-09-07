@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="stroke_color">#ff00ff00</color>
+	<color name="fill_color">#5a00ff00</color>
+	<color name="cui_list_selector_normal">#00000000</color>
+	<color name="cui_list_selector_pressed">#FF4B5D70</color>
+    <color name="tj_white">#ffffff</color>
+    <color name="tj_black">#000000</color>
+    <color name="tj_red">#ff0000</color>
+    <color name="tj_yellow">#ffff00</color>
+    <color name="tj_blue">#0000ff</color>
+    <color name="tj_green">#00ff00</color>
+	<color name="tj_green_upcount">#2e5440</color>
+	<color name="group_btn_color">#3dc0e0</color>
+	<color name="gray">#808080</color>
+	<color name="textColor">#333333</color>
+	<color name="toolbar_back">#FFFFFF</color>
+	<color name="toolbar_tv">#FFFFFF</color>
+
+	<color name="tj_whiteblue">#3399ff</color>
+    <color name="tj_gray">#828282</color>
+    <color name="tj_line_gray">#69828282</color>
+    <color name="tj_irongray">#364444</color>
+    <color name="tj_whitegray">#c0c0c0</color>
+    <color name="tj_callerlayout">#1c000000</color>
+    <color name="tj_mywhite">#ffffff</color>  
+    <color name="tj_light_blue">#ff03a5ff</color>
+    <color name="tj_dialog_title">#FF000000</color>
+    <color name="tj_dialog_divider">#FF4DB6FF</color>
+    <color name="tj_dialog_info">#FF284F7A</color>
+    <color name="tj_dialog_btn">#FF8D8D8D</color>
+	<color name="tj_transparent">#00000000</color>
+	<color name="tj_write10">#22ffffff</color>
+	<color name="yellow">#FFCA28</color>
+	<color name="order_yellow">#FFB027</color>
+	<color name="white">#FFFFFF</color>
+	<color name="whitegray">#c0c0c0</color>
+	<color name="colorPrimary">#1984d4</color>
+	<color name="base_select">#dfdfdf</color>
+	<color name="infoTextColor">#999999</color>
+	<color name="colorPrimary_red">#FF4081</color>
+	<color name="red">#FF0000</color>
+	<color name="bg_tran">#64000000</color>
+	<color name="tran">#00000000</color>
+	<color name="qiebian">#1E2939</color>
+	<color name="base_normal">#ffffff</color>
+	<color name="gray_tint">#F8F8F8</color>
+
+	<color name="edit_hint_color">#999999</color>
+	<color name="ios_default">#EBEBF1</color>
+	<color name="tj_pull_list_head_color">#ffa8a8a8</color>
+	<color name="tj_pressed">#959da0</color> 
+	<color name="tj_normal">#e0e0e0</color>
+	<color name="tj_my_green">#00A8E9</color>
+	<color name="tj_my_white">#99ffffff</color>
+	<color name="tj_prem_item_bg_odd">#e4ebf3</color>
+	<color name="tj_prem_item_bg_even">#f2f6fa</color>
+	<color name="tj_orange">#f65b16</color>
+	<color name="tj_work_icon_press">#2884c5</color>
+	<color name="tj_work_icon_on">#0f6cae</color>
+	<color name="tj_is_share">#8cc63f</color>
+	<color name="tj_no_share">#fe6102</color>
+	<color name="tj_main_color">#429fec</color>
+	<color name="tj_service_outlets_bg">#EEEFF3</color>
+	<color name="tj_perm_guide_txt">#6b6c6f</color>
+	
+	<!--ZXing  -->
+	<color name="tj_viewfinder_frame">#2477ab</color>
+    <color name="tj_viewfinder_mask">#60000000</color>
+    <color name="tj_possible_result_points">#c0ffff00</color>
+    <color name="tj_result_view">#b0000000</color>
+    
+    <color name="tj_line">#ffd3dde6</color>
+    <color name="tj_tab_text">#333333</color>
+    <color name="tj_list_item_selected">#eeeeee</color>
+    
+    <color name="line">#ffd3dde6</color>
+    
+    	<color name="expressage_select">#FE6606</color>
+	<color name="expressage_normal">#2B2B2B</color>
+	
+	<color name="tj_btn_green">#8DC73F</color>
+	<color name="tj_btn_blue">#2AABE4</color>
+	<color name="search_edit_gray">#ffcccccc</color>
+	<color name="tab_press_blue">#00a7eb</color>
+	<color name="tab_nomorl">#f1f9fc</color>
+	<color name="tab_text_nomorl">#979c9f</color>
+	<color name="main_more_background">#f0f0f0</color>
+	<color name="tj_gray_bg">#f0f0f0</color>
+	<color name="tj_blue_btn_bg">#00a8ea</color>
+	<color name="tj_blue_btn_slid">#4acef0</color>
+	<color name="tj_gray_line">#e3e3d3</color>
+	<color name="tj_pull_down_text">#808080</color>
+	<color name="tj_popupwindow_text">#333333</color>
+	<color name="tj_reserve_bg">#b7c5d2</color>
+</resources>

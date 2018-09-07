@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tj_bg_main_more"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/layoutSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tj_main_more_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/tj_ic_more_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="进度查询"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/layoutReserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tj_main_more_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/tj_ic_more_reserve" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="预约业务"
+            android:textSize="16sp" />
+    </LinearLayout>
+        <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/layoutWDBJ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tj_main_more_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/tj_ic_more_wdbj" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="业务办件"
+            android:textSize="16sp" />
+    </LinearLayout>
+        <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/layoutFavorit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tj_main_more_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:background="@drawable/tj_ic_more_favorite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="收藏事项"
+            android:textSize="16sp" />
+    </LinearLayout>
+        <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#d3d3d3" />
+
+</LinearLayout>

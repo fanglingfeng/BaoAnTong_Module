@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_file_item"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="6dp"
+            android:layout_height="20dp"
+            android:background="@color/tj_my_green" />
+
+
+        <TextView
+            android:id="@+id/tv_apply_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="@dimen/space_30"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingTop="@dimen/space_10"
+            android:singleLine="true"
+            android:text="深圳市民办学校幼儿园"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_dzhyq"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="@dimen/space_20"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shape_file_status"
+            android:gravity="center"
+            android:text="纸"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0.5"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tj_line_gray" />
+
+    <LinearLayout
+        android:background="@drawable/item_recycler_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:background="@drawable/item_recycler_background"
+            android:id="@+id/rl_uploaded"
+            android:layout_width="@dimen/space_120"
+            android:layout_height="@dimen/space_100"
+            android:layout_centerVertical="true">
+
+            <com.tjsoft.webhall.widget.RoundAngleImageView
+                android:id="@+id/iv_upload"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/tj_add_file"
+                app:roundHeight="@dimen/space_5"
+                app:roundWidth="@dimen/space_5" />
+
+
+            <TextView
+
+                android:id="@+id/tv_upload_count"
+                android:layout_width="@dimen/space_20"
+                android:layout_height="@dimen/space_20"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/tj_count_bg"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_apply_yaoqiu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="材料要求：原举办者提交《深圳市民办学校（幼儿园）举办者变更申请表点啦啦啦》" />
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="@dimen/space_20"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0.5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        android:background="@color/tj_line_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/space_5">
+
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下载："
+            android:visibility="gone" />
+
+        <!--
+                <TextView
+                    android:id="@+id/tv_kongbiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_download"
+                    android:text="空表"
+                    android:textColor="@color/tj_light_blue" />
+
+                <TextView
+                    android:id="@+id/tv_yangbiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:layout_toRightOf="@id/tv_kongbiao"
+                    android:text="样表"
+                    android:textColor="@color/tj_light_blue" />-->
+
+
+        <RelativeLayout
+            android:layout_marginLeft="30dp"
+            android:id="@+id/rl_kongbiao"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_10"
+            android:background="@drawable/btn_toolbar_tv_selector"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="15dp"
+                android:layout_height="12dp"
+                android:background="@mipmap/kongbiao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="空表"
+                android:textColor="@color/tj_light_blue"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_yangbiao"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/space_10"
+            android:background="@drawable/btn_toolbar_tv_selector"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="15dp"
+                android:layout_height="12dp"
+                android:background="@mipmap/yangbiao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="样表"
+                android:textColor="@color/tj_light_blue"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_share"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_toolbar_tv_selector"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="15dp"
+                android:layout_height="13dp"
+                android:background="@mipmap/share" />
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="分享"
+                android:textColor="@color/tj_light_blue"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

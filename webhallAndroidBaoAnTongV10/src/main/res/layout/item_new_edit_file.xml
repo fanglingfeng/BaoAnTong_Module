@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.tjsoft.webhall.entity.UploadStatus" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="attBean"
+            type="com.tjsoft.webhall.entity.ATTBean" />
+
+
+    </data>
+
+    <RelativeLayout
+
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/item_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/imgPreView_fl"
+                android:layout_width="@dimen/space_180"
+                android:layout_height="@dimen/space_220"
+                android:layout_margin="@dimen/space_8">
+
+                <com.tjsoft.webhall.widget.RoundAngleImageView
+                    android:id="@+id/imgPreView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    app:roundHeight="@dimen/space_5"
+                    app:roundWidth="@dimen/space_5"
+                    />
+
+                <Button
+                    android:id="@+id/reUpData"
+                    android:layout_width="@dimen/space_180"
+                    android:layout_height="@dimen/space_250"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/upload_material_shape"
+                    android:text="上传文件失败，点击重新上传！"
+                    android:textColor="@color/red"
+                    android:visibility="@{attBean.upStatus==UploadStatus.UPLOAD_ERROR?View.VISIBLE:View.GONE}" />
+
+                <FrameLayout
+                    android:id="@+id/progress_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/upload_material_shape"
+                    android:visibility="@{attBean.upStatus==UploadStatus.UPLOADING?View.VISIBLE:View.GONE}">
+
+                    <com.tjsoft.webhall.widget.DonutProgress
+                        android:id="@+id/donut_progress"
+                        android:layout_width="@dimen/space_60"
+                        android:layout_height="@dimen/space_60"
+                        android:layout_gravity="center"
+                        app:donut_finished_color="#FF4081"
+                        app:donut_finished_stroke_width="@dimen/space_2"
+                        app:donut_text_color="@color/white"
+                        app:donut_unfinished_color="@color/white"
+                        app:donut_unfinished_stroke_width="@dimen/space_2"
+                        app:progress="@{(int)attBean.progress}" />
+                </FrameLayout>
+                <TextView
+                    android:layout_gravity="bottom"
+                    android:id="@+id/fileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@{attBean.ATTACHNAME}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15"
+                    android:background="@drawable/bg_tran_bottom_corner"/>
+                <TextView
+
+                    android:background="@drawable/bg_green_corner"
+                    android:layout_width="@dimen/space_40"
+                    android:layout_height="@dimen/space_18"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="已上传"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12"
+                    android:visibility="@{attBean.upStatus==UploadStatus.UPLOAD_SUCCESS?View.VISIBLE:View.GONE}" />
+            </FrameLayout>
+
+
+
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/zhengwu_delete_material"
+                android:visibility="@{attBean.edit?View.VISIBLE:View.GONE}" />
+            <!--&amp;&amp;(attBean.upStatus!=UploadStatus.UPLOADING))-->
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

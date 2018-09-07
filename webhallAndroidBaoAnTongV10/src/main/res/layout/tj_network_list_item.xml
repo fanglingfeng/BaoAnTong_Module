@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tj_list_item_selector"
+    android:paddingBottom="10dp" >
+
+    <LinearLayout
+        android:id="@+id/type"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#F0F0F0"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="3sp"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:background="#419FEB" />
+
+        <TextView
+            android:id="@+id/typeContent"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="17sp" >
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type" >
+
+        <TextView
+            android:id="@+id/NETWORKNAME"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:text="dddddddddddddddddddddddd"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/NETWORKPHONE"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NETWORKNAME"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="45dp"
+            android:text="dddddddddddddddddddddddd"
+            android:textColor="@color/tj_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/NETWORKADDRESS"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NETWORKPHONE"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="5dp"
+            android:text="dddddddddddddddddddddddd"
+            android:textColor="@color/tj_gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/tj_arrows" />
+
+        <ImageView
+            android:id="@+id/isApply"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_is_apply"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" 
+    android:background="@color/tj_white">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tj_nav_bg" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tj_back_selector" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="评议"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tj_home"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/pName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="市权限内固定资产投资项目审批"
+        android:textColor="#2476bc"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_margin="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f3f3f3"  
+        android:padding="5dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checkedButton="@+id/ataaw1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="请选择评价意见："
+                android:textColor="#2476bc"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/ataaw1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="非常满意(100)"
+                android:textColor="#2476bc" />
+
+            <RadioButton
+                android:id="@+id/ataaw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满意(90-99)"
+                android:textColor="#2476bc" />
+
+            <RadioButton
+                android:id="@+id/ataaw3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="基本满意(80-89)"
+                android:textColor="#2476bc" />
+
+            <RadioButton
+                android:id="@+id/ataaw4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一般(70-79)"
+                android:textColor="#2476bc" />
+
+            <RadioButton
+                android:id="@+id/ataaw5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="很差(69以下)"
+                android:textColor="#2476bc" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="备注："
+                android:textColor="#2476bc"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/remark"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:gravity="top"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tj_blue_btn_style"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/tj_white"
+        android:textSize="20sp" />
+
+</LinearLayout>

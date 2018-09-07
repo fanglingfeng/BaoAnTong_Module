@@ -1,0 +1,242 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="80dp">
+
+                <com.tjsoft.camera.MQCameraSurfaceView
+                    android:id="@+id/camera_surfaceview"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center" />
+
+                <com.tjsoft.camera.MaskView
+
+                    android:id="@+id/view_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/captrue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/capture"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/capture_scan_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/kakalib_scan_ray"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="bottom|center_vertical"
+                android:background="#3E8F90"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_30"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_8"
+                        android:layout_height="@dimen/space_8"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:background="@drawable/white_dot" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_20">
+
+                        <TextView
+                            android:id="@+id/tv_selected_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/space_20"
+                            android:layout_centerHorizontal="true"
+                            android:text="单张模式"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_choose_single"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/space_20"
+                            android:layout_marginRight="@dimen/space_20"
+                            android:layout_toLeftOf="@id/tv_selected_type"
+                            android:text="单张模式"
+                            android:textColor="@color/tj_black"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_choose_multi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/space_20"
+                            android:layout_marginLeft="@dimen/space_20"
+                            android:layout_toRightOf="@id/tv_selected_type"
+                            android:text="连续模式"
+                            android:textColor="@color/tj_black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_90"
+                    android:layout_gravity="bottom|center_vertical"
+                    android:background="#3E8F90">
+
+
+                    <RelativeLayout
+                        android:id="@+id/camera_img_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/btn_shutter"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/camera_img"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:id="@+id/camera_img_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_toEndOf="@+id/camera_img"
+                            android:layout_toRightOf="@+id/camera_img"
+                            android:background="@drawable/shape_circle"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <com.tjsoft.camera.widget.DrawCircleCamera
+                        android:id="@+id/btn_shutter"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:background="@drawable/sel_btn_bg" />
+
+                    <RelativeLayout
+                        android:layout_marginRight="@dimen/space_10"
+                        android:layout_width="@dimen/space_40"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/btn_shili"
+                            android:layout_width="@dimen/space_40"
+                            android:layout_height="@dimen/space_40"
+                            android:text="示例"
+                            android:textColor="@color/white"
+                             />
+                        <TextView
+                            android:gravity="center"
+                            android:layout_below="@id/btn_shili"
+                            android:id="@+id/btn_finish"
+                            android:layout_width="@dimen/space_40"
+                            android:layout_height="@dimen/space_40"
+                            android:text="完成"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressBar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/progressBar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="图像处理中..."
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/camera_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left|top"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_back_camera_bg" />
+
+    <ImageButton
+        android:id="@+id/camera_btn_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left|top"
+        android:layout_margin="10dp"
+        android:background="@drawable/flash_selecter" />
+
+    <ImageButton
+        android:id="@+id/camera_btn_overturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left|top"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/camera_btn_flash"
+        android:background="@drawable/btn_recorder_overturn"
+        android:visibility="gone" />
+
+</RelativeLayout>

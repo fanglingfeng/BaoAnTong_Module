@@ -1,0 +1,1 @@
+include ':app', ':webhallAndroidBaoAnTongV10', ':ocr_ui', ':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391'

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tj_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#0fffffff"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/chooseArea"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/tj_spinner_box"
+            android:textColor="@color/tj_white"
+            android:textSize="17sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择地区"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="25dp"
+		    android:layout_marginTop="5dp"
+		    android:layout_marginBottom="5dp"	
+		    android:gravity="center_vertical"	
+		    android:text="   区直部门"
+		    android:background="@color/tj_line_gray"/>
+            <com.tjsoft.webhall.lib.ListViewForScrollView
+                android:id="@+id/deptList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="#dddddd"
+                android:dividerHeight="1px" />
+
+            <ImageView
+                android:id="@+id/empty"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tj_empty"
+                android:contentDescription="@null" />
+            <TextView
+				android:visibility="gone"
+		    android:layout_width="match_parent"
+		    android:layout_height="25dp"
+		    android:layout_marginTop="5dp"
+		    android:layout_marginBottom="5dp"	
+		    android:gravity="center_vertical"	
+		    android:text="   驻区部门"
+		    android:background="@color/tj_line_gray"/>
+            <com.tjsoft.webhall.lib.ListViewForScrollView
+				android:visibility="gone"
+                android:id="@+id/QZdeptList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="#dddddd"
+                android:dividerHeight="1px" />
+
+            <ImageView
+				android:visibility="gone"
+                android:id="@+id/empty2"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tj_empty"
+                android:contentDescription="@null" />
+            <TextView 
+		    android:layout_width="match_parent"
+		    android:layout_marginTop="5dp"
+		    android:layout_marginBottom="5dp"
+		    android:layout_height="25dp"
+		    android:gravity="center_vertical"
+		    android:text="   街道"
+		    android:background="@color/tj_line_gray"/>
+            <com.tjsoft.webhall.lib.ListViewForScrollView
+                android:id="@+id/StreetList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="#dddddd"
+                android:dividerHeight="1px" />
+
+            <ImageView
+                android:id="@+id/empty1"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tj_empty"
+                android:contentDescription="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

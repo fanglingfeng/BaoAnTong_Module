@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/tj_list_item_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/imgPreView"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp" />
+
+    <TextView
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_alignBottom="@id/imgPreView"
+        android:background="#88000000"
+        android:gravity="center"
+        android:id="@+id/fileName"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="dddddddddddd"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:background="@color/tj_transparent"
+        android:text="编辑"
+        android:textColor="@color/tj_blue"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_alignParentRight="true"
+        android:id="@+id/delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/tj_edit_delete_pressed_icon"
+        android:textColor="@color/tj_blue"
+        />
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="61dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/tj_download"
+        android:textColor="@color/tj_blue"
+        android:visibility="gone"/>
+
+</RelativeLayout>

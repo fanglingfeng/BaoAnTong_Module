@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tj_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/tj_nav_bg" >
+
+            <RelativeLayout
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/tj_back_selector" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="材料编辑"
+                android:textColor="@color/tj_white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:textColor="@color/tj_white"
+                android:text="编辑"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:padding="30dp"
+            />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/materialName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="材料名称"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/licenseInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="温馨提示：上传文件不能超过2M,大于2M的建议去PC版上传。支持上传的文件有word、excel、图片、pdf。"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/check_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="证照编号:" />
+
+                <EditText
+                    android:id="@+id/certificateid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="有效期(起):" />
+
+                <TextView
+                    android:id="@+id/certificatestartdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/tj_register_spinner"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/is_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="有效期(止):" />
+
+                <TextView
+                    android:id="@+id/certificateenddate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/tj_register_spinner"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="永久有效" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="5dp"
+                android:background="@color/tj_black" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <GridView
+                android:numColumns="2"
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/menu_fab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                fab:menu_animationDelayPerItem="0"
+                fab:menu_backgroundColor="#99000000"
+                fab:menu_colorNormal="@color/yellow"
+                fab:menu_colorPressed="@color/order_yellow"
+                fab:menu_colorRipple="@color/order_yellow"
+                fab:menu_icon="@drawable/fab_add"
+                fab:menu_labels_ellipsize="end"
+                fab:menu_labels_maxLines="2">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab1"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/whitegray"
+                    fab:fab_colorRipple="@color/whitegray"
+                    fab:fab_hideAnimation="@anim/jump_to_down"
+
+                    fab:fab_showAnimation="@anim/jump_from_down"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fab_photo"
+                    fab:fab_label="拍照上传" />
+
+                <!--<com.github.clans.fab.FloatingActionButton-->
+                    <!--android:id="@+id/fab2"-->
+                    <!--style="@style/FabButtonsStyle"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/fab_picture"-->
+                    <!--fab:fab_label="选择图片" />-->
+
+                <com.github.clans.fab.FloatingActionButton
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/whitegray"
+                    fab:fab_colorRipple="@color/whitegray"
+                    fab:fab_hideAnimation="@anim/jump_to_down"
+
+                    fab:fab_showAnimation="@anim/jump_from_down"
+                    android:id="@+id/fab3"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fab_file"
+                    fab:fab_label="选择文件"/>
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/add"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/tj_online_booking_selector"
+                android:text="添 加"
+                android:textColor="@color/tj_white"
+                android:textSize="17sp" />
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/sure"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/tj_online_booking_selector"
+                android:text="确定"
+                android:textColor="@color/tj_white"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:textSize="16dp"
+                android:id="@+id/tv_page_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="(18/18)" />
+
+            <Button
+                android:id="@+id/auto_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:text="全部删除"
+                android:gravity="center"
+                android:background="@drawable/btn_toolbar_tv_selector"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_toolbar_tv_selector"
+                android:text="上一份"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_toolbar_tv_selector"
+                android:tag="skin:colorPrimary:textColor|skin:btn_toolbar_tv_selector:background"
+                android:text="下一份"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/tj_add_tip_ok" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/more_popup_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popup_more_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_recycler_background"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/popup_more_home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tj_gray_bg" />
+
+    <LinearLayout
+        android:id="@+id/popup_more_bszn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_recycler_background"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/popup_more_bszn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="办事指南"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bszn_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tj_gray_bg" />
+
+    <LinearLayout
+        android:id="@+id/popup_more_zxkf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_recycler_background"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/popup_more_zxkf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="在线客服"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tj_gray_bg" /><LinearLayout
+        android:id="@+id/popup_more_yzgx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_recycler_background"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/popup_more_yzgx" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="用证共享"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tj_gray_bg" />
+
+    <LinearLayout
+        android:id="@+id/popup_more_rxdh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/item_recycler_background"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/popup_more_phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="热线电话"
+            android:textColor="@color/tj_popupwindow_text"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/popup_more_qysq"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/tj_transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/popup_more_bszn"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textColor="@color/tj_popupwindow_text"
+            android:text="企业申请"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<manifest package="com.tjsoft.msfw.guangdongshenzhenbaoan" android:versionCode="1" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0.2">
+  <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" tools:overrideLibrary="net.liang.appbaselibrary" xmlns:tools="http://schemas.android.com/tools"/>
+  <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.CALL_PHONE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.FLASHLIGHT"/>
+  <uses-feature android:name="android.hardware.camera"/>
+  <uses-feature android:name="android.hardware.camera.autofocus"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+  <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/tj_ic_launcher" android:largeHeap="true" tools:replace="android:icon" xmlns:tools="http://schemas.android.com/tools">
+    <receiver android:name="com.tjsoft.webhall.receiver.TaiJiQRCodeResultReceiver" android:enabled="true" android:exported="false">
+      <intent-filter android:priority="100">
+        <action android:name="com.mst.code.ACTION_QRCODE_SCAN"/>
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.tjsoft.webhall.WSBSMainActivity_v2" android:exported="true" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.MyBrowser" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.user.Login" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.user.Register" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.user.ForgotPassword" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.user.ChangePassword" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.user.ChangeUserInfo" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.user.ChangeEnterpriseInfo" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.fileChoose.TestCSOActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ChooseArea" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ApplyOL_Step1" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ApplyOL_Step2" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.PermListByCode" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.PermListByCooperate" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.PermListByDept" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.PermListByBusinessId" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.PermGuide" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.WorkSpace" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.Download" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.OperateGuide" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.MapNavigation" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.search.Search" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.search.SearchSchedule" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.search.PermListByName" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.xtbs.XTBS" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.bsdt.BSDT" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.bsdt.WDBJ" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.bsdt.AdviceList" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.bsdt.AdviceSubmit" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.bsdt.ReserveList" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.bsdt.ReserveSubmit" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.grkj.GRKJ" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.PermGuideContainer" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.Upload" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.QYSQ" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.camera.IDCardActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.camera.FaceAuthActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.ApplyList" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.HistoreShare" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.HistoreShare_v2" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.HistoreShareNoPre" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.MaterialManage" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.ExamineMSG" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.camera.TakePhotoActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.PreacceptNotice" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.ApplyResult" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.Find" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.ReserveDetail" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.TakePhotos" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.LicenseUpload" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.yhzx.Set" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.set.About" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.set.Introductions" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.fileChoose.FileChooserActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.db.PermListByDB" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.yhzx.YHZX" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.lib.MyText" android:screenOrientation="portrait"/>
+    <activity android:name="com.google.zxing.CaptureActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.Notice" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.expressage.ExpressageAdd" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.expressage.ExpressageChoose" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.expressage.ExpressageList" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.expressage.ExpressageNotice" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.expressage.ExpressageProgress" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.DeptList" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.ImageScannerActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.ImageEnhanceActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ImagePreActivity" android:hardwareAccelerated="false" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.NetworkDetail" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ApplyGuideActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.OrderGuideActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.NetworkListActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.WSBS" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.WSBS1" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.WSBS2" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.AddComplain" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.AddConsult" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ConsultList" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ComplainList" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ConsultContent" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.ComplainContent" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.PermInfoActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.work.companylist.CompanyListActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.WSBSWeb" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.expressage.LZFSAcitvity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+    <activity android:name="com.tjsoft.webhall.ui.search.LoadingActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.wsbs.MoreActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.expressage.ExpressageModifyAddress" android:screenOrientation="portrait"/>
+    <activity android:name="com.tjsoft.webhall.ui.materialmanage.MaterialManageActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.widget.TakePhotos_v2" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.afilechoose.afilechooser.FileChooserActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.dzzzk.DZZZKActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.xkzkj.XKZKJActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.xkzkj.xkzxx.XKZXXActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.xkzkj.xkzxx.ShiliActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.xkzkj.XKZKJActivity_search" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.xkzkj.XKZKJActivity_v2" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <activity android:name="com.tjsoft.webhall.ui.xkzkj.XKZKJActivity_search_v2" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+    <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"/>
+  </application>
+</manifest>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tj_gray_bg" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/parent_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/tj_white"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/blms_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="办理模式:此事项全流程网上办理"
+                    android:textColor="@color/tj_my_green" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ywgsd_parent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tj_white"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:text="业务归属地："
+                    android:textColor="@color/tj_black" />
+                <TextView
+                    android:id="@+id/tv_ywgsd"
+                    android:gravity="center"
+                    android:textColor="@color/tj_black"
+                    android:text="请选择"
+                    android:background="@drawable/bg_item_toggle_permlist"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"/>
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/parent_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tj_bg_spinner"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/child_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tj_bg_spinner"
+                    android:spinnerMode="dropdown" />
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/third_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tj_bg_spinner"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/DJCLparent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/tj_white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" >
+
+                    <TextView
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/tj_my_green" />
+
+                    <TextView
+                        android:id="@+id/chooseDJCL_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="请选择递交材料方式:"
+                        android:textColor="@color/tj_black" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/lzfs_bg_shape"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+
+                    <RadioGroup
+                        android:id="@+id/DJRidaoGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/WDDJ"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  网点递交"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/YJDJ"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  邮寄递交"
+                            android:textSize="14sp" />
+                        <RadioButton
+                            android:id="@+id/WXDJZZCL"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  无须递交"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="8dp"
+                        android:background="@color/tj_gray_bg" />
+
+                    <TextView
+                        android:id="@+id/wddj_tv"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="说明：业务“网上预审通过”短信通知您到网点递交原件"
+                        android:textColor="@color/tj_gray" />
+
+                    <TextView
+                        android:id="@+id/yjdj_tv"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="说明：  本事项是在业务“办结”环节，由EMS邮政人员上门收取申请材料。请在收到办结短信通知后，准备好所有申请材料，保持手机畅通，等待EMS邮政人员联系上门收件。申请材料需验原件的应同时提交原件和盖章复印件，原件通过邮政速递寄回。
+请注意：如快递过程中发生证照遗失等情况，由申请人自负风险！请谨慎选择此递交方式！
+"
+                        android:textColor="@color/tj_gray" />
+                    <TextView
+                        android:id="@+id/wxdjzzcl_tv"                
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="说明：业务办理无须递交纸质材料"
+                        android:visibility="gone"
+                        android:textColor="@color/tj_gray" />
+                    <TextView
+                        android:id="@+id/dj_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="网点地址："
+                        android:visibility="gone"
+                        android:textColor="@color/tj_gray" />
+                    <RelativeLayout
+                        android:id="@+id/rl_address_send"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="10dp"
+                        android:minHeight="50dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/tv_temp_myaddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="添加寄件人地址>>"
+                            android:textColor="@color/tj_red" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_myaddresss_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@+id/SEND_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="寄  件  人："
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/SEND"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/SEND_tip"
+                                android:text=""
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/PHONE_SEND"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_toRightOf="@+id/SEND"
+                                android:text=""
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/address_tip_my"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/SEND_tip"
+                                android:layout_marginTop="5dp"
+                                android:text="地址："
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/ADDRESS_MY"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/SEND_tip"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@+id/address_tip_my"
+                                android:text=""
+                                android:textColor="@color/tj_gray" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/tj_arrows" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LZFSparent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/tj_white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/tj_my_green" />
+
+                    <TextView
+                        android:id="@+id/chooseLZFS_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="请选择领取证照方式:"
+                        android:textColor="@color/tj_black" >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/tj_gray_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/lzfs_bg_shape"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/WDLQ"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  网点领取"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/YJLQ"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  邮寄领取"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/ZXDY"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radio_bg_selector"
+                            android:text="  自行打印"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="8dp"
+                        android:background="@color/tj_gray_bg" />
+
+                    <LinearLayout android:id="@+id/wdlq_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/recever_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="承诺办理时限:XX工作日，具体结果以短信通知为主"
+                            android:textColor="@color/tj_gray" />
+
+                        <TextView
+                            android:id="@+id/wdlq_tv"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recever_tip"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="说明：业务“办结”短信通知您到网点领取结果证件"
+                            android:textColor="@color/tj_gray" >
+                        </TextView>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/yzlq_tv"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:text="说明：业务“办结”短信通知您业务已经办结并通过中国邮政速递结果证件给您，请 查收。选择此种方式领证，证照寄发之日视为已送达办事人。如快递过程中证照遗失，申请人需按补证程序重新申请发证。中国邮政速递费用按EMS收费标准采用到付的方式由申请人自行支付。"
+                        android:textColor="@color/tj_gray" />
+                    <RelativeLayout
+                        android:id="@+id/addAddress_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:minHeight="50dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/address_emptp_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="添加邮寄地址>>"
+                            android:textColor="@color/tj_red" />
+
+                        <RelativeLayout
+                            android:id="@+id/address_info_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@+id/RECEIVE_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="收  件  人："
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/RECEIVE"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/RECEIVE_tip"
+                                android:text=""
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/PHONE"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_toRightOf="@+id/RECEIVE"
+                                android:text=""
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/address_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/RECEIVE_tip"
+                                android:layout_marginTop="5dp"
+                                android:text="收货地址："
+                                android:textColor="@color/tj_gray" />
+
+                            <TextView
+                                android:id="@+id/ADDRESS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/RECEIVE_tip"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@+id/address_tip"
+                                android:text=""
+                                android:textColor="@color/tj_gray" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/tj_arrows" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/zxdy_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="说明：请申请人于业务办结登陆PC网厅“我的办事”点击“我的证照”栏目下载电子证照并打印"
+                        android:textColor="@color/tj_gray"
+                        android:visibility="gone" />
+                      <TextView
+                        android:id="@+id/lq_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="领取地址："
+                        android:textColor="@color/tj_gray"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/tv_gongzhonghao"
+                android:text="提示：敬请关注《掌上宝安》微信公众号，实时查看办理进度。"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

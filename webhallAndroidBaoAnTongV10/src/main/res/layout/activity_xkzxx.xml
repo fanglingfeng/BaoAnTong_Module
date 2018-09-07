@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tj_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/tj_nav_bg">
+
+            <RelativeLayout
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/tj_back_selector" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_edit"
+                android:padding="@dimen/space_5"
+                android:background="@drawable/shape_toolbar_tv"
+                android:layout_marginRight="@dimen/space_10"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/space_15"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:text="编辑"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginRight="@dimen/space_60"
+                android:layout_marginLeft="@dimen/space_90"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:id="@+id/titleName"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="许可证信息"
+                android:textColor="@color/tj_white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/title_form_staus"
+                            android:layout_width="@dimen/space_15"
+                            android:layout_height="@dimen/space_15"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/space_4"
+                            android:src="@drawable/tj_right_no" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/title_file_status"
+                            android:layout_width="@dimen/space_15"
+                            android:layout_height="@dimen/space_15"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/space_4"
+                            android:src="@drawable/tj_right_no" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_30"
+                    android:background="@android:color/white"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/tj_main_color"
+                    app:tabTextColor="@color/tj_main_color" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_0.3" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none" />
+
+
+            <LinearLayout
+
+                android:id="@+id/applyLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="horizontal"
+               >
+
+                <Button
+                    android:id="@+id/goBack2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/space_40"
+                    android:layout_margin="@dimen/space_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toolbar_tv_selector"
+                    android:text="上一步"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_17"
+                    />
+
+                <Button
+                    android:id="@+id/tv_submit_xkz"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/space_40"
+                    android:layout_margin="@dimen/space_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_btn_gone_shape"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_17"
+                   />
+
+                <Button
+
+                    android:id="@+id/next"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/space_40"
+                    android:layout_margin="@dimen/space_5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_toolbar_tv_selector"
+                    android:text="下一步"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_17"
+                   />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

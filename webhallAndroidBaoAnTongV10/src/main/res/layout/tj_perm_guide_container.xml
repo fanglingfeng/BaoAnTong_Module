@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/tj_white"
+    android:orientation="vertical"
+    tools:context=".WSBSMainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tj_nav_bg" >
+
+       <RelativeLayout 
+	    	android:id="@+id/back"
+	    	android:layout_width="50dp"
+	    	android:layout_height="match_parent">
+        	<ImageView            
+            	android:layout_width="25dp"
+            	android:layout_height="25dp"
+            	android:layout_centerVertical="true"
+            	android:layout_marginLeft="10dp"
+            	android:background="@drawable/tj_back_selector" />
+		</RelativeLayout>
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="事项详情"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/tj_legal_conditions"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RadioButton
+                android:id="@+id/radioBtn1"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:checked="true"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtn2"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtn3"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/addFavorite"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tj_ic_perm_favorite"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+    <com.tjsoft.webhall.lib.NoTouchViewPage
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:layout_weight="1"
+        android:clickable="true" >
+
+        <!-- 这里可以把PagerTabStrip替换成PagerTitleStrip看看效果有何不同 -->
+
+    </com.tjsoft.webhall.lib.NoTouchViewPage>
+
+    <LinearLayout
+        android:background="@color/tj_white"
+        android:id="@+id/applyLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/declare"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tj_online_booking_selector"
+            android:text="网上申报"
+            android:textColor="@color/tj_white"
+            android:textSize="17sp" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/reserve"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tj_online_booking_selector"
+            android:text="网上预约"
+            android:textColor="@color/tj_white"
+            android:textSize="17sp" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnWSZX"
+            android:textColor="@color/tj_white"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="我要咨询"
+            android:background="#A2B3B7"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNotify"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/tj_btn_gone"
+        android:textColor="@color/tj_white"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+</LinearLayout>

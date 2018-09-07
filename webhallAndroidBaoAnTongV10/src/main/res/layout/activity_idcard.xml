@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_idcard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tj_nav_bg" >
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/tj_back_selector" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="身份认证"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/more"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tj_more"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/gallery_button_front"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="相册选择 正面"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/gallery_button_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="相册选择 反面"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/id_card_front_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="身份证正面"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <Button
+android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="现在认证"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/id_card_back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="身份证反面"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/id_card_back_button_native"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="身份证反面(本地质量控制)"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/info_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <TextView
+        android:textColor="#7D7D7D"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="提示：完成企业申请需完成身份认证！"/>
+
+    <Button
+        android:id="@+id/id_card_front_button_native"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/tj_online_booking_selector"
+        android:text="现在认证"
+        android:textColor="@color/tj_white"
+        android:textSize="18sp" />
+
+</LinearLayout>

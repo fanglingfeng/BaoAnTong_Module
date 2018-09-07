@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/tj_list_item_selector" >
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="dddddddddddd"
+        android:textSize="17sp" />
+
+    <Button
+        android:visibility="gone"
+        android:background="@color/tj_transparent"
+        android:textColor="@color/tj_blue"
+        android:id="@+id/edit"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:text="编辑" />
+
+    <Button
+        android:background="@drawable/tj_delete"
+        android:textColor="@color/tj_blue"
+        android:id="@+id/delete"
+        android:layout_marginRight="20dp"
+        android:layout_width="20dp"
+        android:layout_height="23dp" />
+    <Button
+        android:visibility="gone"
+        android:background="@drawable/tj_download"
+        android:textColor="@color/tj_blue"
+        android:id="@+id/download"
+        android:layout_width="61dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="10dp"
+         />
+
+</LinearLayout>

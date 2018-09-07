@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_more_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tj_nav_bg"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/tj_back_selector" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@color/tj_white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tj_home"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/more_secher_sechedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tj_main_more_selector"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/sechedule_ic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tj_ic_main_jdcx" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/sechedule_ic"
+            android:text="进度查询"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/more_network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/tj_main_more_selector"
+        android:padding="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/network_ic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tj_ic_main_fwwd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/network_ic"
+            android:text="我要预约"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/more_wdsb_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tj_main_more_selector"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/wdsb_ic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tj_ic_main_wdsb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/wdsb_ic"
+            android:text="我的申报"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/more_wdyy_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/tj_main_more_selector"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/wdyy_ic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tj_ic_main_wdyy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/wdyy_ic"
+            android:text="我的预约"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/more_wdsc_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/tj_main_more_selector"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/wdsc_ic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tj_ic_main_wdsc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/wdsc_ic"
+            android:text="我的收藏"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/more_zxzx_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/tj_main_more_selector"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/zxzc_ic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tj_ic_main_zxts" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/zxzc_ic"
+            android:text="在线咨询"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_xkzkj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/tj_main_more_selector"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/iv_xkzkj"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tj_ic_main_zxts" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/iv_xkzkj"
+            android:text="许可证空间"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tj_arrows" />
+    </RelativeLayout>
+</LinearLayout>
