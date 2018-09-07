@@ -35,12 +35,12 @@ allprojects {
 //            url "https://jitpack.io"
 //
 //        }
-        maven {
-            url "https://raw.githubusercontent.com/fanglingfeng/wsbslib/master"
-        }
 //        maven {
-//            url "https://jitpack.io"
+//            url "https://raw.githubusercontent.com/fanglingfeng/wsbslib/master"
 //        }
+        maven {
+            url "https://jitpack.io"
+        }
 
         google()
         mavenCentral()
