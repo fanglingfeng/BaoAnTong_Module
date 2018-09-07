@@ -102,14 +102,14 @@ android {
         abortOnError false
     }
     signingConfigs {//签名配置
-        release {//发布版签名配置
-            storeFile file("D://workspace/file/xuexibao.keys")//密钥文件路径
+        release {//发布版签名配置E:\Users\fanglingfeng\tjsoft\BaoAnTong_Module\app\xuexibao.keys
+            storeFile file("E://Users/fanglingfeng/tjsoft/BaoAnTong_Module/app/xuexibao.keys")//密钥文件路径
             storePassword "tyky\$123456"//密钥文件密码
             keyAlias "tyky_czing"//key别名
             keyPassword "tyky\$123456"//key密码
         }
         debug {//debug版签名配置
-            storeFile file("D://workspace/file/xuexibao.keys")
+            storeFile file("E://Users/fanglingfeng/tjsoft/BaoAnTong_Module/app/xuexibao.keys")
             storePassword "tyky\$123456"
             keyAlias "tyky_czing"
             keyPassword "tyky\$123456"
@@ -159,4 +159,6 @@ dependencies {
 
     //    compile(name: 'WbCloudFaceVerifySdk.aar', ext: 'aar')
     api 'com.tbruyelle.rxpermissions2:rxpermissions:0.8.2@aar'
+//    api 'com.tjsoft:wsbslib:1.0.1'
+//    api 'com.github.fanglingfeng:BaoAnTong_Module:1.0.2'
 }
