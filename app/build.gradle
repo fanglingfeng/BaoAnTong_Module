@@ -156,9 +156,8 @@ dependencies {
     api 'com.bm.photoview:library:1.4.1'
     api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
 
-
     //    compile(name: 'WbCloudFaceVerifySdk.aar', ext: 'aar')
     api 'com.tbruyelle.rxpermissions2:rxpermissions:0.8.2@aar'
 //    api 'com.tjsoft:wsbslib:1.0.1'
-//    api 'com.github.fanglingfeng:BaoAnTong_Module:1.0.2'
+
 }

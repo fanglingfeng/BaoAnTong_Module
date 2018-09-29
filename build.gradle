@@ -34,6 +34,7 @@ allprojects {
         maven {
             url "https://jitpack.io"
         }
+        maven { url "https://raw.githubusercontent.com/fanglingfeng/ocr_ui_lib/master" }
 
         maven { url "https://raw.githubusercontent.com/fanglingfeng/wsbslib/master" }
         google()
