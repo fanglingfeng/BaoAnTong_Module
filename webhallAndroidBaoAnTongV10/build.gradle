@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.jakewharton.butterknife'
 apply from: './utils.gradle'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.fanglingfeng'
+//apply plugin: 'com.github.dcendents.android-maven'
+//group='com.github.fanglingfeng'
 
 
 buildscript {
@@ -102,39 +102,32 @@ android {
         baoan{
 //            flavorDimensions "1"
             dependencies {
-//                本地跑demo用这个
-//                baoanCompile files('libs/BaiduLBS_Android.jar')
-//                baoanCompile files('libs/imageloader.jar')
-//                baoanCompile files('libs/locSDK_5.2.jar')
-//                baoanCompile files('libs/Msc.jar')
-//                baoanCompile files('libs/Sunflower.jar')
-//                baoanCompile files('libs/uk-co-senab-photoview.jar')
-//                baoanCompile files('libs/zxing.jar')
-                //打app测试demo时用下面的代码或者给平安
-//               implementation files('libs/BaiduLBS_Android.jar')
-//               implementation files('libs/imageloader.jar')
-//               implementation files('libs/locSDK_5.2.jar')
-//               implementation files('libs/Msc.jar')
-//               implementation files('libs/Sunflower.jar')
-//               implementation files('libs/uk-co-senab-photoview.jar')
-//               implementation files('libs/zxing.jar')
-//               implementation files('libs/classes.jar')
-//               implementation project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
+
+                //app测试demo时用下面的代码或者给平安
+               implementation files('libs/BaiduLBS_Android.jar')
+               implementation files('libs/imageloader.jar')
+               implementation files('libs/locSDK_5.2.jar')
+               implementation files('libs/Msc.jar')
+               implementation files('libs/Sunflower.jar')
+               implementation files('libs/uk-co-senab-photoview.jar')
+               implementation files('libs/zxing.jar')
+               implementation files('libs/classes.jar')
+               implementation project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
 
 
 
 //                gradlew assemblerelease
 //gradlew uploadArchives
 //                打aar包用下面的，provided 代表这些jar包是别人有的，不用打到包里面
-               baoanCompileOnly files('libs/zxing.jar')
-               baoanCompileOnly files('libs/BaiduLBS_Android.jar')
-               baoanCompileOnly files('libs/imageloader.jar')
-               baoanCompileOnly files('libs/locSDK_5.2.jar')
-               baoanCompileOnly files('libs/Msc.jar')
-               baoanCompileOnly files('libs/Sunflower.jar')
-               baoanCompileOnly files('libs/uk-co-senab-photoview.jar')
-               baoanCompileOnly files('libs/classes.jar')
-               baoanCompileOnly project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
+//               baoanCompileOnly files('libs/zxing.jar')
+//               baoanCompileOnly files('libs/BaiduLBS_Android.jar')
+//               baoanCompileOnly files('libs/imageloader.jar')
+//               baoanCompileOnly files('libs/locSDK_5.2.jar')
+//               baoanCompileOnly files('libs/Msc.jar')
+//               baoanCompileOnly files('libs/Sunflower.jar')
+//               baoanCompileOnly files('libs/uk-co-senab-photoview.jar')
+//               baoanCompileOnly files('libs/classes.jar')
+//               baoanCompileOnly project(':WbCloudFaceVerifySdk-proRelease-v1.3.38-f1e2391')
 
             }
         }
